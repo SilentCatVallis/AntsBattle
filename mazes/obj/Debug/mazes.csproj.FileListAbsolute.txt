@@ -1,0 +1,8 @@
+C:\Users\213\Desktop\mazes\bin\Debug\mazes.dll.config
+C:\Users\213\Desktop\mazes\bin\Debug\mazes.dll
+C:\Users\213\Desktop\mazes\bin\Debug\mazes.pdb
+C:\Users\213\Desktop\mazes\obj\Debug\mazes.csprojResolveAssemblyReference.cache
+C:\Users\213\Desktop\mazes\obj\Debug\mazes.Properties.Resources.resources
+C:\Users\213\Desktop\mazes\obj\Debug\mazes.csproj.GenerateResource.Cache
+C:\Users\213\Desktop\mazes\obj\Debug\mazes.dll
+C:\Users\213\Desktop\mazes\obj\Debug\mazes.pdb
