@@ -21,7 +21,9 @@ namespace Ants
 				.AddRule('#', loc => new Wall(loc))
 				.AddRule('S', loc => new Source(loc))
                 .AddRule('F', loc => new Frog(loc))
-                .AddRule('W', loc => new Food(loc))
+                .AddRule('E', loc => new Food(loc))
+                .AddRule('A', loc => new Ant1(loc))
+                .AddRule('a', loc => new Ant2(loc))
                 .Load("mazes\\maze.txt", world);
 
 			var mainForm = new MazeForm(new Images(".\\images"), world);

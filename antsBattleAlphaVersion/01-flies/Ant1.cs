@@ -5,9 +5,9 @@ using mazes;
 
 namespace Ants
 {
-	public class Ant : WorldObject
+	public class Ant1 : WorldObject
 	{
-		public Ant(Point location) : base(location)
+		public Ant1(Point location) : base(location)
 		{
 		}
 
@@ -19,31 +19,30 @@ namespace Ants
 
 		private Point GetDirection(IWorld world)
 		{
-            if (random.Next(5) == 0) return GetRandomDirection(world);
-            else
-                return GetDirectionTowardTarget(world);
-        }
+		    return random.Next(5) == 0 ? GetRandomDirection(world) : GetDirectionTowardTarget(world);
+		}
 
-		private Point GetRandomDirection(IWorld readonlyWorld)
+	    private Point GetRandomDirection(IWorld readonlyWorld)
 		{
 			var directions = new[] { new Point(1, 0), new Point(-1, 0), new Point(0, 1), new Point(0, -1) }
 				.Where(d => !readonlyWorld.GetObjectsAt(Location.Add(d)).Any())
-				.Concat(new[] { new Point(0, 0), })
+				.Concat(new[] { new Point(0, 0)})
 				.ToList();
 			return directions[random.Next(directions.Count)];
 		}
 
 		private Point GetDirectionTowardTarget(IWorld world)
 		{
-            Point endPath = PathFinder.GetDirectionTo(Location, world);
-            endPath.X += Location.X;
-            endPath.Y += Location.Y;
+            var endPath = PathFinder1.GetDirectionTo(Location, world);
+            var path = new Point(endPath.Y, endPath.X);
+            path.X += Location.X;
+            path.Y += Location.Y;
             if (world.IsFrogCanEat(endPath))
-            {
                 world.RemoveObject(this);
-            }
-            return PathFinder.GetDirectionTo(Location, world);
-		}
+		    if (world.Contains<Food>(Location))
+		        world.AddStatistic("first");
+            return endPath;
+        }
 
 		private static readonly Random random = new Random();
 	}

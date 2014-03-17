@@ -44,11 +44,13 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="PathFinder.cs" />
+    <Compile Include="Ant2.cs" />
+    <Compile Include="PathFinder1.cs" />
+    <Compile Include="PathFinder2.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Source.cs" />
-    <Compile Include="Ant.cs" />
+    <Compile Include="Ant1.cs" />
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>
       <LastGenOutput>Resources.Designer.cs</LastGenOutput>

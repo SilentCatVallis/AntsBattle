@@ -7,7 +7,16 @@ namespace mazes
 {
 	public class World : IWorld
 	{
-        public readonly int MouthLength = 6;
+	    public Statistic statistic = new Statistic();
+
+	    public void AddStatistic(string player)
+	    {
+	        if (player == "first")
+	            statistic.FirstPlayer++;
+	        else
+	            statistic.SecondPlayer++;
+	    }
+        public readonly int MouthLength = 5;
         public int frogWait = 0;
         public int digestionTime = -7;
         public readonly HashSet<WorldObject> Objects = new HashSet<WorldObject>();
@@ -20,15 +29,14 @@ namespace mazes
         {
             foreach (var obj in Objects)
                 if (obj is Frog)
-                    if (obj.Location.X - ant.X < MouthLength && obj.Location.Y - ant.Y < MouthLength && frogWait >= 0)
-                    {
-                        frogWait = digestionTime;
+                    if (Math.Abs(obj.Location.X - ant.X) < MouthLength && Math.Abs(obj.Location.Y - ant.Y) < MouthLength && frogWait >= 0)
                         return true;
-                    }
             return false;
         }
 
-		public void AddObject(WorldObject obj)
+
+
+        public void AddObject(WorldObject obj)
 		{
 			Objects.Add(obj);
 			if (!Cells.ContainsKey(obj.Location)) Cells.Add(obj.Location, new HashSet<WorldObject>());
@@ -62,22 +70,46 @@ namespace mazes
             {
                 Point point = new Point(random.Next(Size.Width - 2) + 1, random.Next(Size.Height - 2) + 1);
                 if (!Contains<Wall>(point) && !Contains<Frog>(point))
+                {
                     AddObject(new Food(point));
+                    Point simmetricPoint = new Point(Size.Width - point.X - 1, Size.Height - point.Y - 1);
+                    AddObject(new Food(simmetricPoint));
+                }
             }
         }
 
 		public void MakeStep()
 		{
-			Time++;
+		    if (Time == 0)
+		    {
+		        
+		    }
+            Time++;
             if (frogWait < 0)
                 frogWait++;
-			foreach (var obj in Objects.ToList())
+            var ants = new List<WorldObject>();
+            var others = new List<WorldObject>();
+            foreach (var obj in Objects.ToList())
 			{
-				RemoveObject(obj);
-				obj.Location = obj.Destination;
-				AddObject(obj);
-				obj.Act(this);
+                if(!(obj is Wall) && !(obj is Frog) && !(obj is Food))
+                    ants.Add(obj);
+                else
+                    others.Add(obj);
 			}
+		    foreach (var ant in ants)
+		    {
+                RemoveObject(ant);
+                ant.Location = ant.Destination;
+                AddObject(ant);
+                ant.Act(this);
+            }
+            foreach (var other in others)
+            {
+                RemoveObject(other);
+                other.Location = other.Destination;
+                AddObject(other);
+                other.Act(this);
+            }
             GenerateNewFood();
         }
 

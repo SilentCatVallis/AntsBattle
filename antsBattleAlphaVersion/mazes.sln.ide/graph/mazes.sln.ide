@@ -1,7 +1,7 @@
 ﻿<Solution Format="0.0.0.3">
-  <Version>2014-03-14T13:50:06.4356979Z</Version>
-  <Project Path="C:\Users\213\Desktop\mazes\maze.csproj" />
-  <Project Path="C:\Users\213\Desktop\antsBattle\01-flies\ants.csproj">
-    <Reference Path="C:\Users\213\Desktop\mazes\maze.csproj" />
+  <Version>2014-03-17T03:39:59.3720627Z</Version>
+  <Project Path="C:\Users\213\Desktop\GitHub\Battle\mazes\maze.csproj" />
+  <Project Path="C:\Users\213\Desktop\GitHub\Battle\antsBattleAlphaVersion\01-flies\ants.csproj">
+    <Reference Path="C:\Users\213\Desktop\GitHub\Battle\mazes\maze.csproj" />
   </Project>
 </Solution>

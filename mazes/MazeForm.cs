@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Drawing;
+using System.Drawing.Drawing2D;
 using System.Windows.Forms;
 
 namespace mazes
@@ -54,13 +55,21 @@ namespace mazes
 		protected override void OnPaint(PaintEventArgs e)
 		{
 			var g = e.Graphics;
-			foreach (var obj in world.Objects)
-			{
-				var delta = (float)timeFractions / steps;
-				var x = obj.Destination.X * delta + obj.Location.X * (1 - delta);
-				var y = obj.Destination.Y * delta + obj.Location.Y * (1 - delta);
-				g.DrawImage(obj.GetImage(Images, world.Time), new RectangleF(x * imageSize, y * imageSize, imageSize, imageSize));
-			}
+		    if (world.Time >= 100)
+		    {
+		        g.DrawString(world.statistic.FirstPlayer.ToString() + ' ' + world.statistic.SecondPlayer.ToString(),
+		            DefaultFont, new HatchBrush(HatchStyle.BackwardDiagonal, Color.BlueViolet), Location);
+                
+		    }
+		    else
+		        foreach (var obj in world.Objects)
+		        {
+		            var delta = (float) timeFractions/steps;
+		            var x = obj.Destination.X*delta + obj.Location.X*(1 - delta);
+		            var y = obj.Destination.Y*delta + obj.Location.Y*(1 - delta);
+		            g.DrawImage(obj.GetImage(Images, world.Time),
+		                new RectangleF(x*imageSize, y*imageSize, imageSize, imageSize));
+		        }
 		}
 	}
 }
