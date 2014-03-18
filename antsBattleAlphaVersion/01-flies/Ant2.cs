@@ -38,7 +38,10 @@ namespace Ants
             path.X += Location.X;
             path.Y += Location.Y;
             if (world.IsFrogCanEat(path))
-                world.RemoveObject(this);
+            {
+                world.EatAnt(this);
+                return new Point(0, 0);
+            }
             if (world.Contains<Wall>(path) || world.Contains<Frog>(path) || !world.InsideWorld(path))
                 return new Point(0,0);
             if (world.Contains<Food>(path))

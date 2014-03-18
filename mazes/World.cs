@@ -66,24 +66,24 @@ namespace mazes
 
         public void GenerateNewFood()
         {
-            if (Time % 10 == 0 && ObjectsCount < 1000)
-            {
-                Point point = new Point(random.Next(Size.Width - 2) + 1, random.Next(Size.Height - 2) + 1);
-                if (!Contains<Wall>(point) && !Contains<Frog>(point))
-                {
-                    AddObject(new Food(point));
-                    Point simmetricPoint = new Point(Size.Width - point.X - 1, Size.Height - point.Y - 1);
-                    AddObject(new Food(simmetricPoint));
-                }
-            }
+            if (Time%10 != 0 || ObjectsCount >= 1000)
+                return;
+            var point = new Point(random.Next(Size.Width - 2) + 1, random.Next(Size.Height - 2) + 1);
+            if (Contains<Wall>(point) || Contains<Frog>(point))
+                return;
+            AddObject(new Food(point));
+            var simmetricPoint = new Point(Size.Width - point.X - 1, Size.Height - point.Y - 1);
+            AddObject(new Food(simmetricPoint));
         }
+
+	    public void EatAnt(WorldObject obj)
+	    {
+	        RemoveObject(obj);
+	        frogWait = digestionTime;
+	    }
 
 		public void MakeStep()
 		{
-		    if (Time == 0)
-		    {
-		        
-		    }
             Time++;
             if (frogWait < 0)
                 frogWait++;

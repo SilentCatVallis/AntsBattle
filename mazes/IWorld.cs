@@ -6,6 +6,7 @@ namespace mazes
 	public interface IWorld
 	{
 	    void AddStatistic(string player);
+	    void EatAnt(WorldObject obj);
 		Size Size { get; }
         bool IsFrogCanEat(Point ant);
         //void EatAnt(WorldObject obj);

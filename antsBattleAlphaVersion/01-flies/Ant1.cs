@@ -38,9 +38,12 @@ namespace Ants
             var path = new Point(endPath.X, endPath.Y);
             path.X += Location.X;
             path.Y += Location.Y;
-            if (world.IsFrogCanEat(path))
-                world.RemoveObject(this);
-            if (world.Contains<Wall>(path) || world.Contains<Frog>(path) || !world.InsideWorld(path))
+		    if (world.IsFrogCanEat(path))
+		    {
+		        world.EatAnt(this);
+		        return new Point(0, 0);
+		    }
+		    if (world.Contains<Wall>(path) || world.Contains<Frog>(path) || !world.InsideWorld(path))
                 return new Point(0, 0);
             if (world.Contains<Food>(path))
                 world.AddStatistic("second");

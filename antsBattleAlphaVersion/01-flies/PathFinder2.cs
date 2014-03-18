@@ -10,7 +10,6 @@ namespace Ants
     {
         private static IEnumerable<Point> GetNeighbours(Point from, IWorld world)
         {
-            //А если перемешивать всех соседей перед тем как вернуть, то поведение мух визуально будет естественнее.
             for (int x = from.X - 1; x <= from.X + 1; ++x)
             {
                 for (int y = from.Y - 1; y <= from.Y + 1; ++y)
