@@ -22,3 +22,11 @@ C:\Users\213\Desktop\GitHub\Battle\mazes\obj\Debug\mazes.Properties.Resources.re
 C:\Users\213\Desktop\GitHub\Battle\mazes\obj\Debug\maze.csproj.GenerateResource.Cache
 C:\Users\213\Desktop\GitHub\Battle\mazes\obj\Debug\mazes.dll
 C:\Users\213\Desktop\GitHub\Battle\mazes\obj\Debug\mazes.pdb
+C:\Users\213\Desktop\antsBattle\Battle\mazes\bin\Debug\mazes.dll.config
+C:\Users\213\Desktop\antsBattle\Battle\mazes\bin\Debug\mazes.dll
+C:\Users\213\Desktop\antsBattle\Battle\mazes\bin\Debug\mazes.pdb
+C:\Users\213\Desktop\antsBattle\Battle\mazes\obj\Debug\maze.csprojResolveAssemblyReference.cache
+C:\Users\213\Desktop\antsBattle\Battle\mazes\obj\Debug\mazes.Properties.Resources.resources
+C:\Users\213\Desktop\antsBattle\Battle\mazes\obj\Debug\maze.csproj.GenerateResource.Cache
+C:\Users\213\Desktop\antsBattle\Battle\mazes\obj\Debug\mazes.dll
+C:\Users\213\Desktop\antsBattle\Battle\mazes\obj\Debug\mazes.pdb

@@ -13,8 +13,9 @@ namespace mazes
 		private int timeFractions;
 		private readonly World world = new World();
 		private readonly int stepsPerSecond;
+	    private const int LifeLength = 10;
 
-		public Images Images { get; set; }
+	    public Images Images { get; set; }
 
 		public MazeForm(): this(new Images("."), new World())
 		{
@@ -47,19 +48,19 @@ namespace mazes
 
 		private void OnTimer(object sender, EventArgs e)
 		{
-			timeFractions = (timeFractions + 1)%steps;;
+			timeFractions = (timeFractions + 1)%steps;
 			if (timeFractions == 0) world.MakeStep();
-			Invalidate();
+            if (world.Time <= LifeLength)
+			    Invalidate();
 		}
 
 		protected override void OnPaint(PaintEventArgs e)
 		{
 			var g = e.Graphics;
-		    if (world.Time >= 100)
+		    if (world.Time >= LifeLength)
 		    {
-		        g.DrawString(world.statistic.FirstPlayer.ToString() + ' ' + world.statistic.SecondPlayer.ToString(),
-		            DefaultFont, new HatchBrush(HatchStyle.BackwardDiagonal, Color.BlueViolet), Location);
-                
+		        g.DrawString("First player: " + world.statistic.FirstPlayer + "         " + "Second player: " + world.statistic.SecondPlayer,
+		            DefaultFont, new HatchBrush(HatchStyle.Trellis, Color.Black), Location);
 		    }
 		    else
 		        foreach (var obj in world.Objects)

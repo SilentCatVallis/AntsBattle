@@ -19,9 +19,7 @@ namespace Ants
 
         private Point GetDirection(IWorld world)
         {
-            if (random.Next(5) == 0) return GetRandomDirection(world);
-            else
-                return GetDirectionTowardTarget(world);
+            return GetDirectionTowardTarget(world);
         }
 
         private Point GetRandomDirection(IWorld readonlyWorld)
@@ -36,13 +34,15 @@ namespace Ants
         private Point GetDirectionTowardTarget(IWorld world)
         {
             var endPath = PathFinder2.GetDirectionTo(Location, world);
-            var path = new Point(endPath.Y, endPath.X);
+            var path = new Point(endPath.X, endPath.Y);
             path.X += Location.X;
             path.Y += Location.Y;
-            if (world.IsFrogCanEat(endPath))
+            if (world.IsFrogCanEat(path))
                 world.RemoveObject(this);
-            if (world.Contains<Food>(Location))
-                world.AddStatistic("second");
+            if (world.Contains<Wall>(path) || world.Contains<Frog>(path) || !world.InsideWorld(path))
+                return new Point(0,0);
+            if (world.Contains<Food>(path))
+                world.AddStatistic("first");
             return endPath;
         }
 
