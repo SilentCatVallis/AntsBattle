@@ -13,6 +13,24 @@ C:\Users\213\Desktop\antsBattle\01-flies\bin\Debug\mazes.dll
 C:\Users\213\Desktop\antsBattle\01-flies\bin\Debug\mazes.pdb
 C:\Users\213\Desktop\antsBattle\01-flies\obj\Debug\flies.pdb
 C:\Users\213\Desktop\antsBattle\01-flies\bin\Debug\images\ant.png
+<<<<<<< HEAD
+=======
+C:\Users\Михаил\Documents\GitHub\AntsBattle\antsBattleAlphaVersion\01-flies\bin\Debug\flies.exe.config
+C:\Users\Михаил\Documents\GitHub\AntsBattle\antsBattleAlphaVersion\01-flies\obj\Debug\flies.exe
+C:\Users\Михаил\Documents\GitHub\AntsBattle\antsBattleAlphaVersion\01-flies\obj\Debug\flies.pdb
+C:\Users\Михаил\Documents\GitHub\AntsBattle\antsBattleAlphaVersion\01-flies\bin\Debug\images\ant.png
+C:\Users\Михаил\Documents\GitHub\AntsBattle\antsBattleAlphaVersion\01-flies\bin\Debug\images\source.png
+C:\Users\Михаил\Documents\GitHub\AntsBattle\antsBattleAlphaVersion\01-flies\bin\Debug\images\target.png
+C:\Users\Михаил\Documents\GitHub\AntsBattle\antsBattleAlphaVersion\01-flies\bin\Debug\images\wall.png
+C:\Users\Михаил\Documents\GitHub\AntsBattle\antsBattleAlphaVersion\01-flies\bin\Debug\mazes\maze.txt
+C:\Users\Михаил\Documents\GitHub\AntsBattle\antsBattleAlphaVersion\01-flies\bin\Debug\flies.exe
+C:\Users\Михаил\Documents\GitHub\AntsBattle\antsBattleAlphaVersion\01-flies\bin\Debug\flies.pdb
+C:\Users\Михаил\Documents\GitHub\AntsBattle\antsBattleAlphaVersion\01-flies\bin\Debug\mazes.dll
+C:\Users\Михаил\Documents\GitHub\AntsBattle\antsBattleAlphaVersion\01-flies\bin\Debug\mazes.pdb
+C:\Users\Михаил\Documents\GitHub\AntsBattle\antsBattleAlphaVersion\01-flies\obj\Debug\ants.csprojResolveAssemblyReference.cache
+C:\Users\Михаил\Documents\GitHub\AntsBattle\antsBattleAlphaVersion\01-flies\obj\Debug\Flies.Properties.Resources.resources
+C:\Users\Михаил\Documents\GitHub\AntsBattle\antsBattleAlphaVersion\01-flies\obj\Debug\ants.csproj.GenerateResource.Cache
+>>>>>>> 92da672cbf52872eabaf23b8bd75a1758aeb503d
 C:\Users\213\Desktop\GitHub\Battle\antsBattleAlphaVersion\01-flies\bin\Debug\flies.exe.config
 C:\Users\213\Desktop\GitHub\Battle\antsBattleAlphaVersion\01-flies\obj\Debug\flies.exe
 C:\Users\213\Desktop\GitHub\Battle\antsBattleAlphaVersion\01-flies\obj\Debug\flies.pdb
@@ -28,3 +46,21 @@ C:\Users\213\Desktop\GitHub\Battle\antsBattleAlphaVersion\01-flies\bin\Debug\maz
 C:\Users\213\Desktop\GitHub\Battle\antsBattleAlphaVersion\01-flies\obj\Debug\ants.csprojResolveAssemblyReference.cache
 C:\Users\213\Desktop\GitHub\Battle\antsBattleAlphaVersion\01-flies\obj\Debug\Flies.Properties.Resources.resources
 C:\Users\213\Desktop\GitHub\Battle\antsBattleAlphaVersion\01-flies\obj\Debug\ants.csproj.GenerateResource.Cache
+<<<<<<< HEAD
+=======
+C:\Users\213\Desktop\antsBattle\Battle\antsBattleAlphaVersion\01-flies\bin\Debug\flies.exe.config
+C:\Users\213\Desktop\antsBattle\Battle\antsBattleAlphaVersion\01-flies\obj\Debug\flies.exe
+C:\Users\213\Desktop\antsBattle\Battle\antsBattleAlphaVersion\01-flies\obj\Debug\flies.pdb
+C:\Users\213\Desktop\antsBattle\Battle\antsBattleAlphaVersion\01-flies\bin\Debug\images\ant.png
+C:\Users\213\Desktop\antsBattle\Battle\antsBattleAlphaVersion\01-flies\bin\Debug\images\source.png
+C:\Users\213\Desktop\antsBattle\Battle\antsBattleAlphaVersion\01-flies\bin\Debug\images\target.png
+C:\Users\213\Desktop\antsBattle\Battle\antsBattleAlphaVersion\01-flies\bin\Debug\images\wall.png
+C:\Users\213\Desktop\antsBattle\Battle\antsBattleAlphaVersion\01-flies\bin\Debug\mazes\maze.txt
+C:\Users\213\Desktop\antsBattle\Battle\antsBattleAlphaVersion\01-flies\bin\Debug\flies.exe
+C:\Users\213\Desktop\antsBattle\Battle\antsBattleAlphaVersion\01-flies\bin\Debug\flies.pdb
+C:\Users\213\Desktop\antsBattle\Battle\antsBattleAlphaVersion\01-flies\bin\Debug\mazes.dll
+C:\Users\213\Desktop\antsBattle\Battle\antsBattleAlphaVersion\01-flies\bin\Debug\mazes.pdb
+C:\Users\213\Desktop\antsBattle\Battle\antsBattleAlphaVersion\01-flies\obj\Debug\ants.csprojResolveAssemblyReference.cache
+C:\Users\213\Desktop\antsBattle\Battle\antsBattleAlphaVersion\01-flies\obj\Debug\Flies.Properties.Resources.resources
+C:\Users\213\Desktop\antsBattle\Battle\antsBattleAlphaVersion\01-flies\obj\Debug\ants.csproj.GenerateResource.Cache
+>>>>>>> 92da672cbf52872eabaf23b8bd75a1758aeb503d

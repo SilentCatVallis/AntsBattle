@@ -5,8 +5,11 @@ namespace mazes
 {
 	public interface IWorld
 	{
+	    void AddStatistic(string player);
+	    void EatAnt(WorldObject obj);
 		Size Size { get; }
         bool IsFrogCanEat(Point ant);
+        //void EatAnt(WorldObject obj);
 		bool InsideWorld(Point location);
 		IEnumerable<WorldObject> GetObjectsAt(Point location);
 		bool Contains<T>(Point location);
@@ -17,5 +20,7 @@ namespace mazes
 		//Point Cursor { get; }
 		void MakeStep();
 		void FreezeWorldSize();
+	    
+
 	}
 }

@@ -6,6 +6,17 @@ C:\Users\213\Desktop\mazes\obj\Debug\maze.csproj.GenerateResource.Cache
 C:\Users\213\Desktop\mazes\obj\Debug\mazes.dll
 C:\Users\213\Desktop\mazes\obj\Debug\mazes.pdb
 C:\Users\213\Desktop\mazes\obj\Debug\maze.csprojResolveAssemblyReference.cache
+<<<<<<< HEAD
+=======
+C:\Users\Михаил\Documents\GitHub\AntsBattle\mazes\bin\Debug\mazes.dll.config
+C:\Users\Михаил\Documents\GitHub\AntsBattle\mazes\bin\Debug\mazes.dll
+C:\Users\Михаил\Documents\GitHub\AntsBattle\mazes\bin\Debug\mazes.pdb
+C:\Users\Михаил\Documents\GitHub\AntsBattle\mazes\obj\Debug\maze.csprojResolveAssemblyReference.cache
+C:\Users\Михаил\Documents\GitHub\AntsBattle\mazes\obj\Debug\mazes.Properties.Resources.resources
+C:\Users\Михаил\Documents\GitHub\AntsBattle\mazes\obj\Debug\maze.csproj.GenerateResource.Cache
+C:\Users\Михаил\Documents\GitHub\AntsBattle\mazes\obj\Debug\mazes.dll
+C:\Users\Михаил\Documents\GitHub\AntsBattle\mazes\obj\Debug\mazes.pdb
+>>>>>>> 92da672cbf52872eabaf23b8bd75a1758aeb503d
 C:\Users\213\Desktop\GitHub\Battle\mazes\bin\Debug\mazes.dll.config
 C:\Users\213\Desktop\GitHub\Battle\mazes\bin\Debug\mazes.dll
 C:\Users\213\Desktop\GitHub\Battle\mazes\bin\Debug\mazes.pdb
@@ -14,3 +25,14 @@ C:\Users\213\Desktop\GitHub\Battle\mazes\obj\Debug\mazes.Properties.Resources.re
 C:\Users\213\Desktop\GitHub\Battle\mazes\obj\Debug\maze.csproj.GenerateResource.Cache
 C:\Users\213\Desktop\GitHub\Battle\mazes\obj\Debug\mazes.dll
 C:\Users\213\Desktop\GitHub\Battle\mazes\obj\Debug\mazes.pdb
+<<<<<<< HEAD
+=======
+C:\Users\213\Desktop\antsBattle\Battle\mazes\bin\Debug\mazes.dll.config
+C:\Users\213\Desktop\antsBattle\Battle\mazes\bin\Debug\mazes.dll
+C:\Users\213\Desktop\antsBattle\Battle\mazes\bin\Debug\mazes.pdb
+C:\Users\213\Desktop\antsBattle\Battle\mazes\obj\Debug\maze.csprojResolveAssemblyReference.cache
+C:\Users\213\Desktop\antsBattle\Battle\mazes\obj\Debug\mazes.Properties.Resources.resources
+C:\Users\213\Desktop\antsBattle\Battle\mazes\obj\Debug\maze.csproj.GenerateResource.Cache
+C:\Users\213\Desktop\antsBattle\Battle\mazes\obj\Debug\mazes.dll
+C:\Users\213\Desktop\antsBattle\Battle\mazes\obj\Debug\mazes.pdb
+>>>>>>> 92da672cbf52872eabaf23b8bd75a1758aeb503d

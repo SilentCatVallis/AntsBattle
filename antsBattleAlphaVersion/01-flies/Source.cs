@@ -12,7 +12,7 @@ namespace Ants
 		public override void Act(IWorld world)
 		{
 			if (world.Time%4 == 0 && world.ObjectsCount < 1000)
-                world.AddObject(new Ant(Location));
+                world.AddObject(new Ant1(Location));
 		}
 	}
 }

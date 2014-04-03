@@ -15,10 +15,13 @@ namespace mazes
 
         public override void Act(IWorld world)
         {
-            //if (world.Time % 10 == 0 && world.ObjectsCount < 1000)
-            //    world.AddObject(new Food(new Point(random.Next(world.Size.Width), random.Next(world.Size.Height))));
+            var flag = false;
+            foreach (var obj in world.GetObjectsAt(Location).Where(obj => !(obj is Wall) && !(obj is Frog) && !(obj is Food)))
+                flag = true;
+            if (flag)
+                world.RemoveObject(this);
         }
 
-        private static readonly Random random = new Random();
+        //private static readonly Random random = new Random();
     }
 }
