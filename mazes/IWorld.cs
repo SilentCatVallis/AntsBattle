@@ -20,5 +20,7 @@ namespace mazes
 		//Point Cursor { get; }
 		void MakeStep();
 		void FreezeWorldSize();
+	    
+
 	}
 }

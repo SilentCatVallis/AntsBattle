@@ -49,6 +49,7 @@
   <ItemGroup>
     <Compile Include="Food.cs" />
     <Compile Include="Frog.cs" />
+    <Compile Include="PlayerData.cs" />
     <Compile Include="Statistic.cs" />
     <Compile Include="WorldObject.cs" />
     <Compile Include="Images.cs" />

@@ -7,6 +7,9 @@ namespace mazes
 {
 	public class World : IWorld
 	{
+	    public PlayerData player1 { get; set; }
+	    public PlayerData player2 { get; set; }
+
 	    public Statistic statistic = new Statistic();
 
 	    public void AddStatistic(string player)
@@ -66,7 +69,7 @@ namespace mazes
 
         public void GenerateNewFood()
         {
-            if (Time%10 != 0 || ObjectsCount >= 1000)
+            if (Time%5 != 0 || ObjectsCount >= 1000)
                 return;
             var point = new Point(random.Next(Size.Width - 2) + 1, random.Next(Size.Height - 2) + 1);
             if (Contains<Wall>(point) || Contains<Frog>(point))

@@ -14,7 +14,7 @@ namespace mazes
 		{
 		}
 
-		public Point Location { get; set; }
+		public Point Location { get; set; } 
 		public Point Destination { get; protected set; }
 		public virtual Image GetImage(Images images, long time)
 		{
