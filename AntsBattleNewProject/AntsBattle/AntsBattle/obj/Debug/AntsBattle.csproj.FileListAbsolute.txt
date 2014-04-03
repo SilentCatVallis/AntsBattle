@@ -1,8 +1,0 @@
-c:\users\213\documents\visual studio 2012\Projects\AntsBattle\AntsBattle\bin\Debug\AntsBattle.exe.config
-c:\users\213\documents\visual studio 2012\Projects\AntsBattle\AntsBattle\bin\Debug\AntsBattle.exe
-c:\users\213\documents\visual studio 2012\Projects\AntsBattle\AntsBattle\bin\Debug\AntsBattle.pdb
-c:\users\213\documents\visual studio 2012\Projects\AntsBattle\AntsBattle\obj\Debug\AntsBattle.csprojResolveAssemblyReference.cache
-c:\users\213\documents\visual studio 2012\Projects\AntsBattle\AntsBattle\obj\Debug\AntsBattle.Properties.Resources.resources
-c:\users\213\documents\visual studio 2012\Projects\AntsBattle\AntsBattle\obj\Debug\AntsBattle.csproj.GenerateResource.Cache
-c:\users\213\documents\visual studio 2012\Projects\AntsBattle\AntsBattle\obj\Debug\AntsBattle.exe
-c:\users\213\documents\visual studio 2012\Projects\AntsBattle\AntsBattle\obj\Debug\AntsBattle.pdb
