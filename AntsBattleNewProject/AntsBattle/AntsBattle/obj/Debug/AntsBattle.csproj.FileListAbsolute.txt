@@ -6,3 +6,11 @@ c:\users\213\documents\visual studio 2012\Projects\AntsBattle\AntsBattle\obj\Deb
 c:\users\213\documents\visual studio 2012\Projects\AntsBattle\AntsBattle\obj\Debug\AntsBattle.csproj.GenerateResource.Cache
 c:\users\213\documents\visual studio 2012\Projects\AntsBattle\AntsBattle\obj\Debug\AntsBattle.exe
 c:\users\213\documents\visual studio 2012\Projects\AntsBattle\AntsBattle\obj\Debug\AntsBattle.pdb
+C:\Users\213\Desktop\GitHub\Battle\AntsBattleNewProject\AntsBattle\AntsBattle\bin\Debug\AntsBattle.exe.config
+C:\Users\213\Desktop\GitHub\Battle\AntsBattleNewProject\AntsBattle\AntsBattle\obj\Debug\AntsBattle.exe
+C:\Users\213\Desktop\GitHub\Battle\AntsBattleNewProject\AntsBattle\AntsBattle\obj\Debug\AntsBattle.csprojResolveAssemblyReference.cache
+C:\Users\213\Desktop\GitHub\Battle\AntsBattleNewProject\AntsBattle\AntsBattle\obj\Debug\AntsBattle.Properties.Resources.resources
+C:\Users\213\Desktop\GitHub\Battle\AntsBattleNewProject\AntsBattle\AntsBattle\obj\Debug\AntsBattle.csproj.GenerateResource.Cache
+C:\Users\213\Desktop\GitHub\Battle\AntsBattleNewProject\AntsBattle\AntsBattle\bin\Debug\AntsBattle.exe
+C:\Users\213\Desktop\GitHub\Battle\AntsBattleNewProject\AntsBattle\AntsBattle\bin\Debug\AntsBattle.pdb
+C:\Users\213\Desktop\GitHub\Battle\AntsBattleNewProject\AntsBattle\AntsBattle\obj\Debug\AntsBattle.pdb

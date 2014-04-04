@@ -15,12 +15,11 @@ namespace AntsBattle
 
     public class World
     {
-        public int Time;
+        public long Time { get; set; }
         public Size Size { get; private set; }
+        public int ObjectsCount { get { return Objects.Count; } }
         public HashSet<WorldObject> Objects = new HashSet<WorldObject>();
-        public Dictionary<Point, HashSet<WorldObject>> Map = new Dictionary<Point, HashSet<WorldObject>>();
-        public AIWorld BlackWorld;
-        public AIWorld WhiteWorld;
+        public Dictionary<Point, HashSet<WorldObject>> Cells = new Dictionary<Point, HashSet<WorldObject>>();
         public int WhiteScore = 0;
         public int BlackScore = 0;
 
@@ -33,30 +32,20 @@ namespace AntsBattle
         public IAntAI WhiteAntAI = (IAntAI)Activator.CreateInstance(AiImplementation[0]);
         public IAntAI BlackAntAI = (IAntAI)Activator.CreateInstance(AiImplementation[1]);
 
-
-
-        public World()
-        {
-            BlackWorld = new AIWorld(this, AntColour.Black);
-            WhiteWorld = new AIWorld(this, AntColour.White);
-            Time = 0;
-        }
-
         public void MakeStep()
         {
             foreach (var obj in Objects)
             {
-                Map[obj.Location].Remove(obj);
+                Cells[obj.Location].Remove(obj);
                 obj.Act(this);
-                Map[obj.Location].Add(obj);
+                Cells[obj.Location].Add(obj);
             }
             Time++;
         }
 
         public Object GetObject(Point location, AntColour colour)
         {
-            var objs = Map[location];
-            foreach (var obj in objs)
+            foreach (var obj in Cells[location])
             {
                 if (obj.GetColourOrNone() == AntColour.None)
                     return obj.GetObjectType();
@@ -65,12 +54,24 @@ namespace AntsBattle
             return Object.None;
         }
 
-        public void RemoveObject(Point Target)
+        public void AddObject(WorldObject obj)
         {
-            var removingObj = Map[Target];
+            Objects.Add(obj);
+            if (!Cells.ContainsKey(obj.Location)) Cells.Add(obj.Location, new HashSet<WorldObject>());
+            Cells[obj.Location].Add(obj);
+        }
+
+        public void RemoveObject(Point target)
+        {
+            var removingObj = Cells[target];
             foreach (var obj in removingObj)
                 Objects.Remove(obj);
-            Map[Target] = new HashSet<WorldObject>();
+            Cells[target] = new HashSet<WorldObject>();
+        }
+
+        public void FreezeWorldSize()
+        {
+            Size = Objects.Any() ? new Size(Objects.Max(o => o.Location.X) + 1, Objects.Max(o => o.Location.Y) + 1) : new Size(1, 1);
         }
     }
 }

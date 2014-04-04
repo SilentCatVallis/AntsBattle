@@ -46,8 +46,6 @@ C:\Users\213\Desktop\GitHub\Battle\antsBattleAlphaVersion\01-flies\bin\Debug\maz
 C:\Users\213\Desktop\GitHub\Battle\antsBattleAlphaVersion\01-flies\obj\Debug\ants.csprojResolveAssemblyReference.cache
 C:\Users\213\Desktop\GitHub\Battle\antsBattleAlphaVersion\01-flies\obj\Debug\Flies.Properties.Resources.resources
 C:\Users\213\Desktop\GitHub\Battle\antsBattleAlphaVersion\01-flies\obj\Debug\ants.csproj.GenerateResource.Cache
-<<<<<<< HEAD
-=======
 C:\Users\213\Desktop\antsBattle\Battle\antsBattleAlphaVersion\01-flies\bin\Debug\flies.exe.config
 C:\Users\213\Desktop\antsBattle\Battle\antsBattleAlphaVersion\01-flies\obj\Debug\flies.exe
 C:\Users\213\Desktop\antsBattle\Battle\antsBattleAlphaVersion\01-flies\obj\Debug\flies.pdb
@@ -63,4 +61,3 @@ C:\Users\213\Desktop\antsBattle\Battle\antsBattleAlphaVersion\01-flies\bin\Debug
 C:\Users\213\Desktop\antsBattle\Battle\antsBattleAlphaVersion\01-flies\obj\Debug\ants.csprojResolveAssemblyReference.cache
 C:\Users\213\Desktop\antsBattle\Battle\antsBattleAlphaVersion\01-flies\obj\Debug\Flies.Properties.Resources.resources
 C:\Users\213\Desktop\antsBattle\Battle\antsBattleAlphaVersion\01-flies\obj\Debug\ants.csproj.GenerateResource.Cache
->>>>>>> 92da672cbf52872eabaf23b8bd75a1758aeb503d

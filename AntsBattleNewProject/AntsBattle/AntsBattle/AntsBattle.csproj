@@ -45,13 +45,16 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="AIWorld.cs" />
+    <Compile Include="Images.cs" />
+    <Compile Include="PointExtension.cs" />
+    <Compile Include="WorldLoader.cs" />
     <Compile Include="WorldObjects\BlackAnt.cs" />
     <Compile Include="WorldObjects\Food.cs" />
-    <Compile Include="Form1.cs">
+    <Compile Include="AntForm.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Form1.Designer.cs">
-      <DependentUpon>Form1.cs</DependentUpon>
+    <Compile Include="AntForm.Designer.cs">
+      <DependentUpon>AntForm.cs</DependentUpon>
     </Compile>
     <Compile Include="WorldObjects\Frog.cs" />
     <Compile Include="IAntAI.cs" />

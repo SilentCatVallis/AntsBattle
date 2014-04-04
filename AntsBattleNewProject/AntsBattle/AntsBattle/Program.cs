@@ -17,9 +17,18 @@ namespace AntsBattle
         {
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
-            Application.Run(new Form1());
+            var world = new World();
 
-            
+            //Определяем правила интерпретации символов.
+            new WorldLoader()
+                .AddRule('#', loc => new Wall(loc))
+                .AddRule('F', loc => new Frog(loc))
+                .AddRule('E', loc => new Food(loc))
+                .Load("mazes\\maze.txt", world);
+
+            var mainForm = new AntForm(new Images(".\\images"), world);
+
+            Application.Run(mainForm);
         }
     }
 }

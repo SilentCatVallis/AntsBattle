@@ -1,8 +1,4 @@
 ﻿<Project Format="0.0.0.3">
-<<<<<<< HEAD
-  <Version>2014-03-14T14:46:04.1799768Z</Version>
-=======
-  <Version>2014-04-02T18:31:27.9499881Z</Version>
->>>>>>> 92da672cbf52872eabaf23b8bd75a1758aeb503d
+  <Version>2014-04-04T18:10:55.6295754Z</Version>
   <Binding>True</Binding>
 </Project>

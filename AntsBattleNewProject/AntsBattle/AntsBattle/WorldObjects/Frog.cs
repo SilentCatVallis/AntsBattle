@@ -9,14 +9,13 @@ namespace AntsBattle
 {
     class Frog : WorldObject
     {
+        public Frog(Point location) : base(location)
+		{
+        }
+
         private const int WantToSleep = 10;
         private const int MounthLength = 5;
         private int _sleepTime = 0;
-
-        public override AntColour GetColourOrNone()
-        {
-            return AntColour.None;
-        }
 
         public override Object GetObjectType()
         {

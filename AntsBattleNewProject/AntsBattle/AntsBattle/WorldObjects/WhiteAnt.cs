@@ -1,5 +1,6 @@
 using System;
 using System.Collections.Generic;
+using System.Drawing;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -8,6 +9,10 @@ namespace AntsBattle
 {
     public class WhiteAnt : WorldObject
     {
+        public WhiteAnt(Point location) : base(location)
+		{
+        }
+
         public override Object GetObjectType()
         {
             return Object.AnyAnt;
@@ -21,7 +26,7 @@ namespace AntsBattle
         public override void Act(World world)
         {
             //Direction direction = GetDirection(world);
-            var direction = world.WhiteAntAI.GetDirection(Location, world.WhiteWorld);
+            var direction = world.WhiteAntAI.GetDirection(Location, new AIWorld(world, AntColour.White));
             Destination = Location;
             if (direction == Direction.Up)
                 Destination.Y += 1;

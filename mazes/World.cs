@@ -2,12 +2,13 @@ using System.Collections.Generic;
 using System.Drawing;
 using System.Linq;
 using System;
+using System.Reflection;
 
 namespace mazes
 {
 	public class World : IWorld
 	{
-	    public PlayerData player1 { get; set; }
+        public PlayerData player1 { get; set; }
 	    public PlayerData player2 { get; set; }
 
 	    public Statistic statistic = new Statistic();

@@ -9,6 +9,12 @@ namespace AntsBattle
 {
     public class WorldObject
     {
+        public WorldObject(Point location)
+        {
+            Location = location;
+            Destination = location;
+        }
+
         public Point Location;
         public Point Destination;
 
@@ -26,9 +32,10 @@ namespace AntsBattle
             return Object.None;
         }
 
-        //public virtual Image GetImage(Images images, long time)
-        //{
-        //    return images.GetImage(GetType().Name);
-        //}
+        public virtual Image GetImage(Images images, long time)
+        {
+            return images.GetImage(GetType().Name);
+        }
+
     }
 }
