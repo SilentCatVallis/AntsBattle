@@ -14,7 +14,7 @@ namespace AntsBattle
         }
 
         private const int WantToSleep = 10;
-        private const int MounthLength = 5;
+        private const int MounthLength = 1;
         private int _sleepTime = 0;
 
         public override Object GetObjectType()
@@ -39,7 +39,7 @@ namespace AntsBattle
                     return;
                 var rand = new Random();
                 var frogTarget = ants[rand.Next(ants.Count)];
-                world.RemoveObject(frogTarget);
+                world.RemoveObject(world.Cells[frogTarget].First());
                 _sleepTime = -WantToSleep;
             }
             else

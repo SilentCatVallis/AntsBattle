@@ -23,30 +23,39 @@ namespace AntsBattle
         public int WhiteScore = 0;
         public int BlackScore = 0;
 
-        static readonly Type[] AiImplementation =
+        static readonly Type AiImplementation =
                                     Assembly.LoadFrom("a.dll").GetTypes()
                                     .Where(
                                     type => type.GetInterfaces().Any(i => i == typeof(IAntAI))
-                                    ).ToArray();
+                                    ).First();
 
-        public IAntAI WhiteAntAI = (IAntAI)Activator.CreateInstance(AiImplementation[0]);
-        public IAntAI BlackAntAI = (IAntAI)Activator.CreateInstance(AiImplementation[1]);
+        public IAntAI WhiteAntAI = (IAntAI)Activator.CreateInstance(AiImplementation);
+        public IAntAI BlackAntAI = (IAntAI)Activator.CreateInstance(AiImplementation);
 
         public void MakeStep()
         {
-            foreach (var obj in Objects)
+            foreach (var obj in Objects.ToList())
             {
-                Cells[obj.Location].Remove(obj);
+                RemoveObject(obj);
+                obj.Location = obj.Destination;
+                AddObject(obj);
                 obj.Act(this);
-                Cells[obj.Location].Add(obj);
+
+                //Cells[obj.Location].Remove(obj);
+                //obj.Act(this);
+                //Cells[obj.Location].Add(obj);
             }
             Time++;
         }
 
         public Object GetObject(Point location, AntColour colour)
         {
+            if (!Cells.ContainsKey(location))
+                return Object.None;
             foreach (var obj in Cells[location])
             {
+                if (colour == AntColour.None)
+                    return obj.GetObjectType();
                 if (obj.GetColourOrNone() == AntColour.None)
                     return obj.GetObjectType();
                 return obj.GetColourOrNone() == colour ? Object.YourAnt : Object.EnemyAnt;
@@ -61,12 +70,10 @@ namespace AntsBattle
             Cells[obj.Location].Add(obj);
         }
 
-        public void RemoveObject(Point target)
+        public void RemoveObject(WorldObject obj)
         {
-            var removingObj = Cells[target];
-            foreach (var obj in removingObj)
-                Objects.Remove(obj);
-            Cells[target] = new HashSet<WorldObject>();
+            Objects.Remove(obj);
+            Cells[obj.Location].Remove(obj);
         }
 
         public void FreezeWorldSize()

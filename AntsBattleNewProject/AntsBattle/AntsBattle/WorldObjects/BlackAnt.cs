@@ -26,20 +26,20 @@ namespace AntsBattle
         public override void Act(World world)
         {
             var direction = world.BlackAntAI.GetDirection(Location, new AIWorld(world, AntColour.Black));
-            Destination = Location;
+            var destination = new Point(0, 0);
             if (direction == Direction.Up)
-                Destination.Y += 1;
+                destination.Y += 1;
             if (direction == Direction.Down)
-                Destination.Y -= 1;
+                destination.Y -= 1;
             if (direction == Direction.Left)
-                Destination.X -= 1;
+                destination.X -= 1;
             if (direction == Direction.Right)
-                Destination.X += 1;
-            if (world.GetObject(Destination, AntColour.Black) == Object.Food ||
-                world.GetObject(Destination, AntColour.Black) == Object.None)
-                Location = Destination;
+                destination.X += 1;
+            if ((world.GetObject(Location.Add(destination), AntColour.Black) == Object.Food ||
+                world.GetObject(Location.Add(destination), AntColour.Black) == Object.None))
+                Destination = Location.Add(destination);
             if (world.GetObject(Destination, AntColour.Black) != Object.Food) return;
-            world.RemoveObject(Destination);
+            world.RemoveObject(world.Cells[Destination].First());
             world.BlackScore++;
         }
     }

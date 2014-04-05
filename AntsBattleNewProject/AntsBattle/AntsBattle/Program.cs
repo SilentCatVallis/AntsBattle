@@ -24,7 +24,10 @@ namespace AntsBattle
                 .AddRule('#', loc => new Wall(loc))
                 .AddRule('F', loc => new Frog(loc))
                 .AddRule('E', loc => new Food(loc))
-                .Load("mazes\\maze.txt", world);
+                .AddRule('W', loc => new WhiteAnt(loc))
+                .AddRule('B', loc => new BlackAnt(loc))
+
+                .Load("maps\\map.txt", world);
 
             var mainForm = new AntForm(new Images(".\\images"), world);
 

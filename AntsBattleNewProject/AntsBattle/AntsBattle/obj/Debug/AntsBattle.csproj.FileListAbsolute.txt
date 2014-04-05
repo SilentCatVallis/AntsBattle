@@ -14,3 +14,9 @@ C:\Users\213\Desktop\GitHub\Battle\AntsBattleNewProject\AntsBattle\AntsBattle\ob
 C:\Users\213\Desktop\GitHub\Battle\AntsBattleNewProject\AntsBattle\AntsBattle\bin\Debug\AntsBattle.exe
 C:\Users\213\Desktop\GitHub\Battle\AntsBattleNewProject\AntsBattle\AntsBattle\bin\Debug\AntsBattle.pdb
 C:\Users\213\Desktop\GitHub\Battle\AntsBattleNewProject\AntsBattle\AntsBattle\obj\Debug\AntsBattle.pdb
+C:\Users\213\Desktop\GitHub\Battle\AntsBattleNewProject\AntsBattle\AntsBattle\bin\Debug\maps\map.txt
+C:\Users\213\Desktop\GitHub\Battle\AntsBattleNewProject\AntsBattle\AntsBattle\bin\Debug\images\blackant.png
+C:\Users\213\Desktop\GitHub\Battle\AntsBattleNewProject\AntsBattle\AntsBattle\bin\Debug\images\food.png
+C:\Users\213\Desktop\GitHub\Battle\AntsBattleNewProject\AntsBattle\AntsBattle\bin\Debug\images\wall.png
+C:\Users\213\Desktop\GitHub\Battle\AntsBattleNewProject\AntsBattle\AntsBattle\bin\Debug\images\whiteant.png
+C:\Users\213\Desktop\GitHub\Battle\AntsBattleNewProject\AntsBattle\AntsBattle\bin\Debug\images\frog.png
