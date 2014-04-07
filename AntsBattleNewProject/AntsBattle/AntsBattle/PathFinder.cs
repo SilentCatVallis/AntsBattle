@@ -13,5 +13,10 @@ namespace AntsBattle
         {
             throw new NotImplementedException();
         }
+
+        public string GetPlayerName()
+        {
+            throw new NotImplementedException();
+        }
     }
 }

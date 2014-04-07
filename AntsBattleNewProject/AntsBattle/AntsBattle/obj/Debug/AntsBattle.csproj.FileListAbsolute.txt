@@ -20,3 +20,4 @@ C:\Users\213\Desktop\GitHub\Battle\AntsBattleNewProject\AntsBattle\AntsBattle\bi
 C:\Users\213\Desktop\GitHub\Battle\AntsBattleNewProject\AntsBattle\AntsBattle\bin\Debug\images\wall.png
 C:\Users\213\Desktop\GitHub\Battle\AntsBattleNewProject\AntsBattle\AntsBattle\bin\Debug\images\whiteant.png
 C:\Users\213\Desktop\GitHub\Battle\AntsBattleNewProject\AntsBattle\AntsBattle\bin\Debug\images\frog.png
+C:\Users\213\Desktop\GitHub\Battle\AntsBattleNewProject\AntsBattle\AntsBattle\bin\Debug\maps\info.txt

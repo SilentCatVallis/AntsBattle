@@ -11,3 +11,4 @@ C:\Users\213\Desktop\GitHub\Battle\AntsBattleNewProject\AntsBattle\ClassLibrary1
 C:\Users\213\Desktop\GitHub\Battle\AntsBattleNewProject\AntsBattle\ClassLibrary1\bin\Debug\images\wall.png
 C:\Users\213\Desktop\GitHub\Battle\AntsBattleNewProject\AntsBattle\ClassLibrary1\bin\Debug\images\whiteant.png
 C:\Users\213\Desktop\GitHub\Battle\AntsBattleNewProject\AntsBattle\ClassLibrary1\bin\Debug\images\frog.png
+C:\Users\213\Desktop\GitHub\Battle\AntsBattleNewProject\AntsBattle\ClassLibrary1\bin\Debug\maps\info.txt

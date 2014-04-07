@@ -10,6 +10,7 @@ namespace AntsBattle
     public interface IAntAI
     {
         Direction GetDirection(Point from, AIWorld world);
+        string GetPlayerName();
     }
 
     public enum Direction

@@ -33,6 +33,14 @@ namespace AntsBattle
             return _world.Size;
         }
 
+        public int GetFrogMouthLength()
+        {
+            return _world.FrogMouthLength;
+        }
 
+        public int GetFrogSleepTime()
+        {
+            return _world.FrogWantToSleep;
+        }
     }
 }

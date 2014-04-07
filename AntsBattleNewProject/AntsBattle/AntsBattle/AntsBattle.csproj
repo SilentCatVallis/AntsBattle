@@ -45,6 +45,7 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="AIWorld.cs" />
+    <Compile Include="FormWithResult.cs" />
     <Compile Include="Images.cs" />
     <Compile Include="PointExtension.cs" />
     <Compile Include="WorldLoader.cs" />
@@ -102,6 +103,9 @@
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </Content>
     <Content Include="images\whiteant.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="maps\info.txt">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </Content>
     <Content Include="maps\map.txt">

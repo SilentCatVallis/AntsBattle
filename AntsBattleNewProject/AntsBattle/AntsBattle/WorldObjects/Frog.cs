@@ -13,8 +13,6 @@ namespace AntsBattle
 		{
         }
 
-        private const int WantToSleep = 10;
-        private const int MounthLength = 1;
         private int _sleepTime = 0;
 
         public override Object GetObjectType()
@@ -27,9 +25,9 @@ namespace AntsBattle
             if (_sleepTime >= 0)
             {
                 var ants = new List<Point>();
-                for (var i = Location.Y - MounthLength; i <= Location.Y + MounthLength; ++i)
+                for (var i = Location.Y - world.FrogMouthLength; i <= Location.Y + world.FrogMouthLength; ++i)
                 {
-                    for (var j = Location.X - MounthLength; j <= Location.X + MounthLength; ++j)
+                    for (var j = Location.X - world.FrogMouthLength; j <= Location.X + world.FrogMouthLength; ++j)
                     {
                         if (world.GetObject(new Point(j, i), AntColour.None) == Object.AnyAnt)
                             ants.Add(new Point(j, i));
@@ -40,7 +38,7 @@ namespace AntsBattle
                 var rand = new Random();
                 var frogTarget = ants[rand.Next(ants.Count)];
                 world.RemoveObject(world.Cells[frogTarget].First());
-                _sleepTime = -WantToSleep;
+                _sleepTime = -world.FrogWantToSleep;
             }
             else
             {

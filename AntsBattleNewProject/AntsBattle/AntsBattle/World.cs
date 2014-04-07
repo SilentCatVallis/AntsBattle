@@ -1,6 +1,7 @@
 using System;
 using System.Collections.Generic;
 using System.Drawing;
+using System.IO;
 using System.Linq;
 using System.Reflection;
 using System.Text;
@@ -15,6 +16,9 @@ namespace AntsBattle
 
     public class World
     {
+        public int FrogMouthLength;
+        public int FrogWantToSleep;
+        public int LifeTime;
         public long Time { get; set; }
         public Size Size { get; private set; }
         public int ObjectsCount { get { return Objects.Count; } }
@@ -32,20 +36,26 @@ namespace AntsBattle
         public IAntAI WhiteAntAI = (IAntAI)Activator.CreateInstance(AiImplementation);
         public IAntAI BlackAntAI = (IAntAI)Activator.CreateInstance(AiImplementation);
 
+        public World()
+        {
+            var info = File.ReadLines("maps\\info.txt").ToList();
+            FrogMouthLength = int.Parse(info[0].Split(' ').Last());
+            FrogWantToSleep = int.Parse(info[1].Split(' ').Last());
+            LifeTime = int.Parse(info[2].Split(' ').Last());
+        }
+
         public void MakeStep()
         {
-            foreach (var obj in Objects.ToList())
+            if (LifeTime <= 0) return;
+            foreach (var obj in Objects.ToList().Where(Objects.Contains))
             {
                 RemoveObject(obj);
                 obj.Location = obj.Destination;
                 AddObject(obj);
                 obj.Act(this);
-
-                //Cells[obj.Location].Remove(obj);
-                //obj.Act(this);
-                //Cells[obj.Location].Add(obj);
             }
             Time++;
+            LifeTime--;
         }
 
         public Object GetObject(Point location, AntColour colour)
@@ -66,14 +76,14 @@ namespace AntsBattle
         public void AddObject(WorldObject obj)
         {
             Objects.Add(obj);
-            if (!Cells.ContainsKey(obj.Location)) Cells.Add(obj.Location, new HashSet<WorldObject>());
+            if (!Cells.ContainsKey(obj.Location)) Cells[obj.Location] = new HashSet<WorldObject>();
             Cells[obj.Location].Add(obj);
         }
 
         public void RemoveObject(WorldObject obj)
         {
             Objects.Remove(obj);
-            Cells[obj.Location].Remove(obj);
+            Cells.Remove(obj.Location);
         }
 
         public void FreezeWorldSize()

@@ -13,7 +13,6 @@ namespace AntsBattle
         private int timeFractions;
         private readonly World world = new World();
         private readonly int stepsPerSecond;
-        private const int LifeLength = 10;
 
         public Images Images { get; set; }
 
@@ -37,19 +36,24 @@ namespace AntsBattle
             steps = 1000 / stepsPerSecond / timer.Interval;
             timer.Start();
             DoubleBuffered = true;
-            Text = "Maze";
+            Text = "Ants";
         }
 
         private void OnTimer(object sender, EventArgs e)
         {
             timeFractions = (timeFractions + 1) % steps;
-            if (timeFractions == 0) world.MakeStep();
-            if (world.Time <= LifeLength)
+            if (world.LifeTime > 0)
+            {
+                if (timeFractions == 0)
+                    world.MakeStep();
                 Invalidate();
+            }
+            else Close();
         }
 
         protected override void OnPaint(PaintEventArgs e)
         {
+            BackColor = Color.AliceBlue;
             var g = e.Graphics;
             foreach (var obj in world.Objects)
             {

@@ -26,12 +26,12 @@ namespace AntsBattle
                 .AddRule('E', loc => new Food(loc))
                 .AddRule('W', loc => new WhiteAnt(loc))
                 .AddRule('B', loc => new BlackAnt(loc))
-
                 .Load("maps\\map.txt", world);
 
             var mainForm = new AntForm(new Images(".\\images"), world);
 
             Application.Run(mainForm);
+            Application.Run(new FormWithResult(world));
         }
     }
 }
