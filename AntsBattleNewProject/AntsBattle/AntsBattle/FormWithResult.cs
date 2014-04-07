@@ -38,8 +38,8 @@ namespace AntsBattle
         {
             Width = 600;
             var g = e.Graphics;
-            g.DrawString(world.WhiteAntAI.GetPlayerName() + " score: " + WhiteScore, new Font("Arial", 16), new SolidBrush(Color.Black), 5, 5);
-            g.DrawString(world.BlackAntAI.GetPlayerName() + " score: " + BlackScore, new Font("Arial", 16), new SolidBrush(Color.Black), 5, 55);
+            g.DrawString(world.WhiteAntAI.PlayerName + " score: " + WhiteScore, new Font("Arial", 16), new SolidBrush(Color.Black), 5, 5);
+            g.DrawString(world.BlackAntAI.PlayerName + " score: " + BlackScore, new Font("Arial", 16), new SolidBrush(Color.Black), 5, 55);
         }
     }
 }

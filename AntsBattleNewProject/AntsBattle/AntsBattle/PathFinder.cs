@@ -9,7 +9,15 @@ namespace AntsBattle
 {
     class PathFinder : IAntAI
     {
-        public Direction GetDirection(Point from, AIWorld world)
+        public string PlayerName
+        {
+            get
+            {
+                throw new NotImplementedException();
+            }
+        }
+
+        public Direction GetDirection(Point currentAntLocation, AIWorld world)
         {
             throw new NotImplementedException();
         }

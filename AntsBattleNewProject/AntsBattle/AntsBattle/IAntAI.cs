@@ -9,8 +9,9 @@ namespace AntsBattle
 {
     public interface IAntAI
     {
-        Direction GetDirection(Point from, AIWorld world);
-        string GetPlayerName();
+        Direction GetDirection(Point currentAntLocation, AIWorld world);
+        string PlayerName { get; }
+    
     }
 
     public enum Direction

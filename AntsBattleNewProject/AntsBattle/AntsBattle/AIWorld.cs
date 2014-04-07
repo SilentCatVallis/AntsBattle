@@ -28,19 +28,8 @@ namespace AntsBattle
             return  _world.GetObject(location, _colour);
         }
 
-        public Size GetMapSize()
-        {
-            return _world.Size;
-        }
-
-        public int GetFrogMouthLength()
-        {
-            return _world.FrogMouthLength;
-        }
-
-        public int GetFrogSleepTime()
-        {
-            return _world.FrogWantToSleep;
-        }
+        public Size MapSize { get { return _world.Size; } }
+        public int FrogSleepTime { get { return _world.FrogWantToSleep; } }
+        public int FrogMouthLength { get { return _world.FrogMouthLength; } }
     }
 }
