@@ -16,16 +16,17 @@ namespace AntsBattle
 
     public class World
     {
-        public int FrogMouthLength;
-        public int FrogWantToSleep;
-        public int LifeTime;
+        public int FrogMouthLength { get; private set; }
+        public int FrogWantToSleep { get; private set; }
+        public int LifeTime { get; private set; }
         public long Time { get; set; }
         public Size Size { get; private set; }
         public int ObjectsCount { get { return Objects.Count; } }
+
         public HashSet<WorldObject> Objects = new HashSet<WorldObject>();
         public Dictionary<Point, HashSet<WorldObject>> Cells = new Dictionary<Point, HashSet<WorldObject>>();
-        public int WhiteScore = 0;
-        public int BlackScore = 0;
+        public int WhiteScore { get; set; }
+        public int BlackScore { get; set; }
 
         static readonly Type AiImplementation =
                                     Assembly.LoadFrom("a.dll").GetTypes()

@@ -14,18 +14,18 @@ namespace AntsBattle
 
     public class AIWorld
     {
-        private AntColour Colour;
+        private readonly AntColour _colour;
         private readonly World _world;
 
         public AIWorld(World world, AntColour colour)
         {
-            Colour = colour;
+            _colour = colour;
             _world = world;
         }
 
         public Object GetObjectInCell(Point location)
         {
-            return  _world.GetObject(location, Colour);
+            return  _world.GetObject(location, _colour);
         }
 
         public Size GetMapSize()

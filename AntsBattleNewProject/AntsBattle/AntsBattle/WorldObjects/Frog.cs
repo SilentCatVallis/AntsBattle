@@ -13,7 +13,7 @@ namespace AntsBattle
 		{
         }
 
-        private int _sleepTime = 0;
+        private int _sleepTime;
 
         public override Object GetObjectType()
         {
