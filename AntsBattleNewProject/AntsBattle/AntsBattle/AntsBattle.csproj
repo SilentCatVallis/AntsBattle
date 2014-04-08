@@ -60,7 +60,6 @@
     <Compile Include="WorldObjects\Frog.cs" />
     <Compile Include="IAntAI.cs" />
     <Compile Include="IWorld.cs" />
-    <Compile Include="PathFinder.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="WorldObjects\Wall.cs" />
