@@ -21,3 +21,6 @@ C:\Users\213\Desktop\GitHub\Battle\AntsBattleNewProject\AntsBattle\AntsBattle\bi
 C:\Users\213\Desktop\GitHub\Battle\AntsBattleNewProject\AntsBattle\AntsBattle\bin\Debug\images\whiteant.png
 C:\Users\213\Desktop\GitHub\Battle\AntsBattleNewProject\AntsBattle\AntsBattle\bin\Debug\images\frog.png
 C:\Users\213\Desktop\GitHub\Battle\AntsBattleNewProject\AntsBattle\AntsBattle\bin\Debug\maps\info.txt
+C:\Users\213\Desktop\GitHub\AntsBattle\AntsBattleNewProject\AntsBattle\AntsBattle\bin\Debug\AntsBattle.exe.config
+C:\Users\213\Desktop\GitHub\AntsBattle\AntsBattleNewProject\AntsBattle\AntsBattle\obj\Debug\AntsBattle.exe
+C:\Users\213\Desktop\GitHub\AntsBattle\AntsBattleNewProject\AntsBattle\AntsBattle\obj\Debug\AntsBattle.pdb
