@@ -7,3 +7,6 @@ C:\Users\213\Desktop\GitHub\AntsBattle\AntsBattleNewProject\AntsBattle\StartProj
 C:\Users\213\Desktop\GitHub\AntsBattle\AntsBattleNewProject\AntsBattle\StartProject\obj\Debug\StartProject.csproj.GenerateResource.Cache
 C:\Users\213\Desktop\GitHub\AntsBattle\AntsBattleNewProject\AntsBattle\StartProject\obj\Debug\StartProject.exe
 C:\Users\213\Desktop\GitHub\AntsBattle\AntsBattleNewProject\AntsBattle\StartProject\obj\Debug\StartProject.pdb
+C:\Users\213\Desktop\AntsBattle-master\AntsBattleNewProject\AntsBattle\StartProject\bin\Debug\StartProject.exe.config
+C:\Users\213\Desktop\AntsBattle-master\AntsBattleNewProject\AntsBattle\StartProject\obj\Debug\StartProject.exe
+C:\Users\213\Desktop\AntsBattle-master\AntsBattleNewProject\AntsBattle\StartProject\obj\Debug\StartProject.pdb

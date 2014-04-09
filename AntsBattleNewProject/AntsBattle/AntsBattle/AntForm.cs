@@ -11,14 +11,14 @@ namespace AntsBattle
         private int steps = 8;
         private readonly Timer timer = new Timer();
         private int timeFractions;
-        private readonly World world = new World();
+        private readonly World world;// = new World();
         private readonly int stepsPerSecond;
 
         public Images Images { get; set; }
 
-        public AntForm() : this(new Images("."), new World())
-        {
-        }
+        //public AntForm() : this(new Images("."), new World())
+        //{
+        //}
 
         public AntForm(Images images, World world, int stepsPerSecond = 10)
         {

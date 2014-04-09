@@ -28,21 +28,20 @@ namespace AntsBattle
         public int WhiteScore { get; set; }
         public int BlackScore { get; set; }
 
-        static readonly Type AiImplementation =
-                                    Assembly.LoadFrom("a.dll").GetTypes()
-                                    .Where(
-                                    type => type.GetInterfaces().Any(i => i == typeof(IAntAI))
-                                    ).First();
+        public IAntAI WhiteAntAI;
+        public IAntAI BlackAntAI;
 
-        public IAntAI WhiteAntAI = (IAntAI)Activator.CreateInstance(AiImplementation);
-        public IAntAI BlackAntAI = (IAntAI)Activator.CreateInstance(AiImplementation);
-
-        public World()
+        public World(IList<string> args)
         {
-            var info = File.ReadLines("maps\\info.txt").ToList();
-            FrogMouthLength = int.Parse(info[0].Split(' ').Last());
-            FrogWantToSleep = int.Parse(info[1].Split(' ').Last());
-            LifeTime = int.Parse(info[2].Split(' ').Last());
+            FrogMouthLength = int.Parse(args[1]);
+            FrogWantToSleep = int.Parse(args[2]);
+            LifeTime = int.Parse(args[0]);
+            var aiImplementationWhite =
+                                    Assembly.LoadFrom(args[3]).GetTypes().First(type => type.GetInterfaces().Any(i => i == typeof(IAntAI)));
+            var aiImplementationBlack =
+                                    Assembly.LoadFrom(args[4]).GetTypes().First(type => type.GetInterfaces().Any(i => i == typeof(IAntAI)));
+            WhiteAntAI = (IAntAI)Activator.CreateInstance(aiImplementationWhite);
+            BlackAntAI = (IAntAI)Activator.CreateInstance(aiImplementationBlack);
         }
 
         public void MakeStep()

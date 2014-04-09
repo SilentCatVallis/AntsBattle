@@ -17,7 +17,7 @@ namespace AntsBattle
         {
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
-            var world = new World();
+            var world = new World(args);
 
             //Определяем правила интерпретации символов.
             new WorldLoader()
@@ -26,7 +26,7 @@ namespace AntsBattle
                 .AddRule('E', loc => new Food(loc))
                 .AddRule('W', loc => new WhiteAnt(loc))
                 .AddRule('B', loc => new BlackAnt(loc))
-                .Load("maps\\map.txt", world);
+                .Load("Maps\\" + args[5], world);
 
             var mainForm = new AntForm(new Images(".\\images"), world);
 
