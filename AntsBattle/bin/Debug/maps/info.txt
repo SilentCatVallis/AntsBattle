@@ -1,0 +1,3 @@
+﻿FrogMouthLength: 7
+FrogWantToSleep: 5
+LifeTime: 40
