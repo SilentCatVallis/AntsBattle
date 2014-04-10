@@ -1,8 +1,0 @@
-C:\Users\213\Desktop\GitHub\Battle\AntsBattleNewProject\AntsBattle\ClassLibrary1\bin\Release\maps\map.txt
-C:\Users\213\Desktop\GitHub\Battle\AntsBattleNewProject\AntsBattle\ClassLibrary1\bin\Release\ClassLibrary1.dll
-C:\Users\213\Desktop\GitHub\Battle\AntsBattleNewProject\AntsBattle\ClassLibrary1\bin\Release\ClassLibrary1.pdb
-C:\Users\213\Desktop\GitHub\Battle\AntsBattleNewProject\AntsBattle\ClassLibrary1\bin\Release\AntsBattle.exe
-C:\Users\213\Desktop\GitHub\Battle\AntsBattleNewProject\AntsBattle\ClassLibrary1\bin\Release\AntsBattle.pdb
-C:\Users\213\Desktop\GitHub\Battle\AntsBattleNewProject\AntsBattle\ClassLibrary1\obj\Release\ClassLibrary1.csprojResolveAssemblyReference.cache
-C:\Users\213\Desktop\GitHub\Battle\AntsBattleNewProject\AntsBattle\ClassLibrary1\obj\Release\ClassLibrary1.dll
-C:\Users\213\Desktop\GitHub\Battle\AntsBattleNewProject\AntsBattle\ClassLibrary1\obj\Release\ClassLibrary1.pdb

@@ -1,8 +1,0 @@
-C:\Users\213\Desktop\GitHub\Battle\AntsBattleNewProject\AntsBattle\AntsBattle\bin\Release\AntsBattle.exe.config
-C:\Users\213\Desktop\GitHub\Battle\AntsBattleNewProject\AntsBattle\AntsBattle\bin\Release\maps\map.txt
-C:\Users\213\Desktop\GitHub\Battle\AntsBattleNewProject\AntsBattle\AntsBattle\bin\Release\AntsBattle.exe
-C:\Users\213\Desktop\GitHub\Battle\AntsBattleNewProject\AntsBattle\AntsBattle\bin\Release\AntsBattle.pdb
-C:\Users\213\Desktop\GitHub\Battle\AntsBattleNewProject\AntsBattle\AntsBattle\obj\Release\AntsBattle.Properties.Resources.resources
-C:\Users\213\Desktop\GitHub\Battle\AntsBattleNewProject\AntsBattle\AntsBattle\obj\Release\AntsBattle.csproj.GenerateResource.Cache
-C:\Users\213\Desktop\GitHub\Battle\AntsBattleNewProject\AntsBattle\AntsBattle\obj\Release\AntsBattle.exe
-C:\Users\213\Desktop\GitHub\Battle\AntsBattleNewProject\AntsBattle\AntsBattle\obj\Release\AntsBattle.pdb
