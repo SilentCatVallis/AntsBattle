@@ -37,9 +37,9 @@ namespace AntsBattle
             FrogWantToSleep = int.Parse(args[2]);
             LifeTime = int.Parse(args[0]);
             var aiImplementationWhite =
-                                    Assembly.LoadFrom(args[3]).GetTypes().First(type => type.GetInterfaces().Any(i => i == typeof(IAntAI)));
+                                    Assembly.LoadFrom("Players\\" + args[3]).GetTypes().First(type => type.GetInterfaces().Any(i => i == typeof(IAntAI)));
             var aiImplementationBlack =
-                                    Assembly.LoadFrom(args[4]).GetTypes().First(type => type.GetInterfaces().Any(i => i == typeof(IAntAI)));
+                                    Assembly.LoadFrom("Players\\" + args[4]).GetTypes().First(type => type.GetInterfaces().Any(i => i == typeof(IAntAI)));
             WhiteAntAI = (IAntAI)Activator.CreateInstance(aiImplementationWhite);
             BlackAntAI = (IAntAI)Activator.CreateInstance(aiImplementationBlack);
         }

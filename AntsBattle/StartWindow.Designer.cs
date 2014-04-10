@@ -1,6 +1,6 @@
-namespace StartProject
+namespace AntsBattle
 {
-    partial class StartPage
+    partial class StartWindow
     {
         /// <summary>
         /// Required designer variable.
@@ -20,8 +20,6 @@ namespace StartProject
             base.Dispose(disposing);
         }
 
-        
-
         #region Windows Form Designer generated code
 
         /// <summary>
@@ -30,20 +28,11 @@ namespace StartProject
         /// </summary>
         private void InitializeComponent()
         {
-            this.SuspendLayout();
-            // 
-            // StartPage
-            // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
+            this.components = new System.ComponentModel.Container();
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(872, 477);
-            this.Name = "StartPage";
-            this.Text = "StartPage";
-            this.ResumeLayout(false);
-
+            this.Text = "StartWindow";
         }
 
         #endregion
     }
 }
-

@@ -45,9 +45,16 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="AIWorld.cs" />
-    <Compile Include="FormWithResult.cs" />
+    <Compile Include="ResultsForm.cs" />
     <Compile Include="Images.cs" />
     <Compile Include="PointExtension.cs" />
+    <Compile Include="StartWindow.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="StartWindow.Designer.cs">
+      <DependentUpon>StartWindow.cs</DependentUpon>
+    </Compile>
+    <Compile Include="StartWindowData.cs" />
     <Compile Include="WorldLoader.cs" />
     <Compile Include="WorldObjects\BlackAnt.cs" />
     <Compile Include="WorldObjects\Food.cs" />
@@ -104,10 +111,7 @@
     <Content Include="images\whiteant.png">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </Content>
-    <Content Include="maps\info.txt">
-      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
-    </Content>
-    <Content Include="maps\map.txt">
+    <Content Include="maps\defaultMap.txt">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </Content>
   </ItemGroup>

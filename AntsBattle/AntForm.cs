@@ -13,6 +13,7 @@ namespace AntsBattle
         private int timeFractions;
         private readonly World world;// = new World();
         private readonly int stepsPerSecond;
+        private bool IsOpen;
 
         public Images Images { get; set; }
 
@@ -42,13 +43,10 @@ namespace AntsBattle
         private void OnTimer(object sender, EventArgs e)
         {
             timeFractions = (timeFractions + 1) % steps;
-            if (world.LifeTime > 0)
-            {
-                if (timeFractions == 0)
-                    world.MakeStep();
-                Invalidate();
-            }
-            else Close();
+            if (world.LifeTime <= 0) return;
+            if (timeFractions == 0)
+                world.MakeStep();
+            Invalidate();
         }
 
         protected override void OnPaint(PaintEventArgs e)
