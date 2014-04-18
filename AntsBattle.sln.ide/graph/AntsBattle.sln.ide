@@ -4,5 +4,4 @@
   <Project Path="C:\Users\213\Desktop\GitHub\AntsBattle\ClassLibrary1\ClassLibrary1.csproj">
     <Reference Path="C:\Users\213\Desktop\GitHub\AntsBattle\AntsBattle\AntsBattle.csproj" />
   </Project>
-  <Project Path="C:\Users\213\Desktop\GitHub\AntsBattle\StartProject\StartProject.csproj" />
 </Solution>

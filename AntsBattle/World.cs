@@ -33,29 +33,67 @@ namespace AntsBattle
 
         public World(IList<string> args)
         {
-            FrogMouthLength = int.Parse(args[1]);
-            FrogWantToSleep = int.Parse(args[2]);
-            LifeTime = int.Parse(args[0]);
-            var aiImplementationWhite =
-                                    Assembly.LoadFrom("Players\\" + args[3]).GetTypes().First(type => type.GetInterfaces().Any(i => i == typeof(IAntAI)));
-            var aiImplementationBlack =
-                                    Assembly.LoadFrom("Players\\" + args[4]).GetTypes().First(type => type.GetInterfaces().Any(i => i == typeof(IAntAI)));
-            WhiteAntAI = (IAntAI)Activator.CreateInstance(aiImplementationWhite);
-            BlackAntAI = (IAntAI)Activator.CreateInstance(aiImplementationBlack);
+            try
+            {
+                FrogMouthLength = int.Parse(args[1]);
+                FrogWantToSleep = int.Parse(args[2]);
+                LifeTime = int.Parse(args[0]);
+                var aiImplementationWhite =
+                    Assembly.LoadFrom("Players\\" + args[3])
+                        .GetTypes()
+                        .First(type => type.GetInterfaces().Any(i => i == typeof (IAntAI)));
+                var aiImplementationBlack =
+                    Assembly.LoadFrom("Players\\" + args[4])
+                        .GetTypes()
+                        .First(type => type.GetInterfaces().Any(i => i == typeof (IAntAI)));
+                WhiteAntAI = (IAntAI) Activator.CreateInstance(aiImplementationWhite);
+                BlackAntAI = (IAntAI) Activator.CreateInstance(aiImplementationBlack);
+            }
+            catch (Exception e)
+            {
+                File.AppendAllText("WorldCreateExc.txt", e.ToString());
+            }
         }
 
         public void MakeStep()
         {
-            if (LifeTime <= 0) return;
-            foreach (var obj in Objects.ToList().Where(Objects.Contains))
+            try
             {
-                RemoveObject(obj);
-                obj.Location = obj.Destination;
-                AddObject(obj);
-                obj.Act(this);
+                if (LifeTime <= 0) return;
+                foreach (var obj in Objects.ToList().Where(Objects.Contains))
+                {
+                    RemoveObject(obj);
+                    obj.Location = obj.Destination;
+                    AddObject(obj);
+                    obj.Act(this);
+                }
+                Time++;
+                LifeTime--;
+                GenerateNewFood();
             }
-            Time++;
-            LifeTime--;
+            catch (Exception e)
+            {
+                File.AppendAllText("WorldStepExc.txt", e.ToString());
+            }
+        }
+
+        private void GenerateNewFood()
+        {
+            if (ObjectsCount > Size.Width * Size.Height / 2 || Time % 10 != 0)
+                return;
+            var random = new Random();
+            while (true)
+            {
+                var x = random.Next(Size.Width);
+                var y = random.Next(Size.Height);
+                if (x < 0 || x >= Size.Width || y < 0 || y >= Size.Height)
+                    continue;
+                if (GetObject(new Point(x, y), AntColour.None) != Object.None ||
+                    GetObject(new Point(Size.Width - x, Size.Height - y), AntColour.None) != Object.None) continue;
+                AddObject(new Food(new Point(x, y)));
+                AddObject(new Food(new Point(Size.Width - x, Size.Height - y)));
+                break;
+            }
         }
 
         public Object GetObject(Point location, AntColour colour)

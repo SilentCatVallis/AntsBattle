@@ -7,6 +7,7 @@ using System.Drawing;
 using System.IO;
 using System.Linq;
 using System.Text;
+using System.Threading;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 
@@ -23,7 +24,7 @@ namespace AntsBattle
         private TextBox FrogSleepTime;
         private Label Message;
         private bool IsReady;
-       // private string Args;
+        // private string Args;
 
         public StartWindow(StartWindowData data)
         {
@@ -72,7 +73,7 @@ namespace AntsBattle
             Controls.Add(mouthLengthLable);
             Controls.Add(frogSleepLable);
             Controls.Add(startButton);
-            Controls.Add(setStatementButton);
+            //Controls.Add(setStatementButton);
             Controls.Add(Message);
         }
 
@@ -82,6 +83,14 @@ namespace AntsBattle
             int lifeLength;
             int mouthLength;
             int sleepTime;
+
+            if (FirstPlayerChoosen.SelectedItem == null && FirstPlayerChoosen.Items.Count > 0)
+                FirstPlayerChoosen.SelectedItem = FirstPlayerChoosen.Items[0];
+            if (SecondPlayerChoosen.SelectedItem == null && SecondPlayerChoosen.Items.Count > 0)
+                SecondPlayerChoosen.SelectedItem = SecondPlayerChoosen.Items[0];
+            if (MapChoosen.SelectedItem == null && MapChoosen.Items.Count > 0)
+                MapChoosen.SelectedItem = MapChoosen.Items[0];
+
             if (FirstPlayerChoosen.SelectedItem == null ||
                 SecondPlayerChoosen.SelectedItem == null ||
                 MapChoosen.SelectedItem == null ||
@@ -124,27 +133,36 @@ namespace AntsBattle
 
         private void ClickStart(object sender, EventArgs e)
         {
-            if (IsReady)
+            try
             {
-                var world = new World(Data.Args);
-                new WorldLoader()
-                    .AddRule('#', loc => new Wall(loc))
-                    .AddRule('F', loc => new Frog(loc))
-                    .AddRule('E', loc => new Food(loc))
-                    .AddRule('W', loc => new WhiteAnt(loc))
-                    .AddRule('B', loc => new BlackAnt(loc))
-                    .Load("Maps\\" + Data.Args[5], world);
+                SetStatements(sender, e);
+                if (IsReady)
+                {
+                    var world = new World(Data.Args);
+                    new WorldLoader()
+                        .AddRule('#', loc => new Wall(loc))
+                        .AddRule('F', loc => new Frog(loc))
+                        .AddRule('E', loc => new Food(loc))
+                        .AddRule('W', loc => new WhiteAnt(loc))
+                        .AddRule('B', loc => new BlackAnt(loc))
+                        .Load("Maps\\" + Data.Args[5], world);
 
-                var mainForm = new AntForm(new Images(".\\images"), world);
-                var resultsForm = new ResultsForm(world);
-                mainForm.Show();
-                resultsForm.Show();
-                Message.Text = "";
+                    var mainForm = new AntForm(new Images(".\\images"), world);
+                    var resultsForm = new ResultsForm(world);
+                    mainForm.Show();
+                    resultsForm.Show();
+                    Message.Text = "";
+                }
+                else
+                {
+                    Message.Text = @"Statements not filled";
+                }
             }
-            else
+            catch (Exception ex)
             {
-                Message.Text = @"Statements not filled";
+                File.AppendAllText("StartWindowsExc.txt", ex.ToString());
             }
         }
+
     }
 }

@@ -38,9 +38,16 @@ namespace AntsBattle
             if ((world.GetObject(Location.Add(destination), AntColour.Black) == Object.Food ||
                 world.GetObject(Location.Add(destination), AntColour.Black) == Object.None))
                 Destination = Location.Add(destination);
-            if (world.GetObject(Destination, AntColour.Black) != Object.Food) return;
-            world.RemoveObject(world.Cells[Destination].First());
-            world.BlackScore++;
+            if (world.GetObject(Destination, AntColour.Black) == Object.Food)
+            {
+                world.RemoveObject(world.Cells[Destination].First(x => x.GetObjectType() == Object.Food));
+                world.BlackScore++;
+            }
+            if (world.GetObject(Location, AntColour.Black) == Object.Food)
+            {
+                world.RemoveObject(world.Cells[Location].First(x => x.GetObjectType() == Object.Food));
+                world.BlackScore++;
+            }
         }
     }
 }

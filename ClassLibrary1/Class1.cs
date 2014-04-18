@@ -10,15 +10,30 @@ namespace ClassLibrary1
 {
     public class Class1 : IAntAI
     {
-        private int a = 0;
+        readonly Random _r = new Random();
+        private int a = 1;
         public Direction GetDirection(Point currentAntLocation, AIWorld world)
         {
-            a++;
-            var obj = world.GetObjectInCell(new Point(2, 2));
-            return (a % 10) % 2 == 0 ? Direction.Up : Direction.Down;
+            
+            var i = _r.Next()%4;
+            switch (i)
+            {
+                case 0:
+                    return Direction.Right;
+                case 1:
+                    return Direction.Up;
+                case 2:
+                    return Direction.Left;
+                case 3:
+                    break;
+            }
+            return Direction.Down;
+            //if (world.GetObjectInCell(new Point(currentAntLocation.X, currentAntLocation.Y + a)) == AntsBattle.Object.Wall)
+            //    a *= -1;
+            //return a == 1 ? Direction.Up : Direction.Down;
         }
 
-        public string PlayerName { get { return "PlayerName"; } }
+        public string PlayerName { get { return "Random"; } }
 
     }
 }
