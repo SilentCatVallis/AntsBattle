@@ -41,7 +41,7 @@ local.properties
 *.user
 *.sln.docstates
 *.sln.ide
-bin
+bin/
 
 # Build results
 
