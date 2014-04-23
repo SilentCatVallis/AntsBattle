@@ -6,6 +6,7 @@ using System.Linq;
 using System.Reflection;
 using System.Text;
 using System.Threading.Tasks;
+using System.Windows.Forms;
 
 namespace AntsBattle
 {
@@ -38,14 +39,20 @@ namespace AntsBattle
                 FrogMouthLength = int.Parse(args[1]);
                 FrogWantToSleep = int.Parse(args[2]);
                 LifeTime = int.Parse(args[0]);
+                var location = Application.ExecutablePath.ToString();
+                for (var i = 0; i < 3; i++)
+                {
+                    location = location.Substring(0, location.LastIndexOf('\\'));
+                }
+                location += "\\Players\\";
                 var aiImplementationWhite =
-                    Assembly.LoadFrom("Players\\" + args[3])
+                    Assembly.LoadFrom(location + args[3])
                         .GetTypes()
-                        .First(type => type.GetInterfaces().Any(i => i == typeof (IAntAI)));
+                        .First(type => type.GetInterfaces().Any(i => i == typeof(IAntAI)));
                 var aiImplementationBlack =
-                    Assembly.LoadFrom("Players\\" + args[4])
+                    Assembly.LoadFrom(location + args[4])
                         .GetTypes()
-                        .First(type => type.GetInterfaces().Any(i => i == typeof (IAntAI)));
+                        .First(type => type.GetInterfaces().Any(i => i == typeof(IAntAI)));
                 WhiteAntAI = (IAntAI) Activator.CreateInstance(aiImplementationWhite);
                 BlackAntAI = (IAntAI) Activator.CreateInstance(aiImplementationBlack);
             }

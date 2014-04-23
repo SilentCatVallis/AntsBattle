@@ -50,3 +50,5 @@ C:\Users\213\Desktop\GitHub\AntsBattle\AntsBattle\obj\Debug\AntsBattle.csprojRes
 C:\Users\213\Desktop\GitHub\AntsBattle\AntsBattle\obj\Debug\AntsBattle.Properties.Resources.resources
 C:\Users\213\Desktop\GitHub\AntsBattle\AntsBattle\obj\Debug\AntsBattle.csproj.GenerateResource.Cache
 C:\Users\213\Desktop\GitHub\AntsBattle\AntsBattle\bin\Debug\maps\defaultMap.txt
+C:\Users\213\Desktop\GitHub\AntsBattle\AntsBattle\bin\Debug\maps\empty.txt
+C:\Users\213\Desktop\GitHub\AntsBattle\AntsBattle\bin\Debug\players\empty.txt

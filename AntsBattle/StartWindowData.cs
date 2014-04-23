@@ -18,7 +18,13 @@ namespace AntsBattle
 
         public StartWindowData()
         {
-            var info = new DirectoryInfo(@"Players");
+            var location = Application.ExecutablePath;
+            for (var i = 0; i < 3; i++)
+            {
+                location = location.Substring(0, location.LastIndexOf('\\'));
+            }
+            location += "\\Players";
+            var info = new DirectoryInfo(location);
             var files = info.GetFiles();
             Players = new List<string>();
             foreach (var file in files.Where(x => x.Extension == ".dll").Select(x => x.ToString()))

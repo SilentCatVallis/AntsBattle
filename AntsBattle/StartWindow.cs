@@ -22,7 +22,12 @@ namespace AntsBattle
         private TextBox LifeLength;
         private TextBox MouthLength;
         private TextBox FrogSleepTime;
+        private Label BattleMap;
+        private Label BlackVsWhite;
         private Label Message;
+        private Label lifeTimeLable;
+        private Label mouthLengthLable;
+        private Label frogSleepLable;
         private bool IsReady;
         // private string Args;
 
@@ -58,9 +63,9 @@ namespace AntsBattle
             MouthLength = new TextBox { Text = "4", Location = new Point(145, 130), Width = 120 };
             FrogSleepTime = new TextBox { Text = "16", Location = new Point(285, 130), Width = 120 };
 
-            var lifeTimeLable = new Label { Text = @"set lifetime", Location = new Point(5, 150), Width = 120 };
-            var mouthLengthLable = new Label { Text = @"set mouth length", Location = new Point(145, 150), Width = 120 };
-            var frogSleepLable = new Label { Text = @"set sleep time", Location = new Point(285, 150), Width = 120 };
+            lifeTimeLable = new Label { Text = @"set lifetime", Location = new Point(5, 150), Width = 120 };
+            mouthLengthLable = new Label { Text = @"set mouth length", Location = new Point(145, 150), Width = 120 };
+            frogSleepLable = new Label { Text = @"set sleep time", Location = new Point(285, 150), Width = 120 };
             Message = new Label { Location = new Point(150, 255), Width = 170 };
 
             Controls.Add(FirstPlayerChoosen);
@@ -138,6 +143,7 @@ namespace AntsBattle
                 SetStatements(sender, e);
                 if (IsReady)
                 {
+                    FreezSettings();
                     var world = new World(Data.Args);
                     new WorldLoader()
                         .AddRule('#', loc => new Wall(loc))
@@ -146,7 +152,6 @@ namespace AntsBattle
                         .AddRule('W', loc => new WhiteAnt(loc))
                         .AddRule('B', loc => new BlackAnt(loc))
                         .Load("Maps\\" + Data.Args[5], world);
-
                     var mainForm = new AntForm(new Images(".\\images"), world);
                     var resultsForm = new ResultsForm(world);
                     mainForm.Show();
@@ -164,5 +169,38 @@ namespace AntsBattle
             }
         }
 
+        private void FreezSettings()
+        {
+            SecondPlayerChoosen.Visible = false;
+            FirstPlayerChoosen.Visible = false;
+            MapChoosen.Visible = false;
+            BattleMap = new Label
+            {
+                Text = "Map : " + MapChoosen.SelectedItem,
+                Location = new Point(30, 90),
+                Width = 500,
+                Height = 100
+            };
+            
+            BlackVsWhite = new Label
+            {
+                Text = FirstPlayerChoosen.SelectedItem + "    VS    " + SecondPlayerChoosen.SelectedItem,
+                Location = new Point(30, 30),
+                Width = 500,
+                Height = 100
+            };
+            Controls.Add(BlackVsWhite);
+            FrogSleepTime.KeyPress += BlockKeyPressed;
+            MouthLength.KeyPress += BlockKeyPressed;
+            LifeLength.KeyPress += BlockKeyPressed;
+            mouthLengthLable.Text = "Mouth length";
+            lifeTimeLable.Text = "Life Time";
+            frogSleepLable.Text = "Frog sleep time";
+        }
+
+        private void BlockKeyPressed(object sender, KeyPressEventArgs e)
+        {
+            e.Handled = true;
+        }
     }
 }

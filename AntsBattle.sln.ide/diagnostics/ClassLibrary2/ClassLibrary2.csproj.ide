@@ -1,0 +1,16 @@
+﻿<Project Format="0.0.0.3">
+  <Version>2014-04-23T17:28:25.7337126Z</Version>
+  <Binding>True</Binding>
+  <Diagnostic>
+    <Code>414</Code>
+    <Id>CS0414</Id>
+    <Severity>Warning</Severity>
+    <Message>The field 'ClassLibrary2.Class1.a' is assigned but its value is never used</Message>
+    <MappedFile>C:\Users\213\Desktop\GitHub\AntsBattle\ClassLibrary2\Class1.cs</MappedFile>
+    <MappedLine>13</MappedLine>
+    <MappedColumn>20</MappedColumn>
+    <OriginalFile>C:\Users\213\Desktop\GitHub\AntsBattle\ClassLibrary2\Class1.cs</OriginalFile>
+    <OriginalLine>13</OriginalLine>
+    <OriginalColumn>20</OriginalColumn>
+  </Diagnostic>
+</Project>

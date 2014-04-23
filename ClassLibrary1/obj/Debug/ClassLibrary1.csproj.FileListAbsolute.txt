@@ -39,3 +39,13 @@ C:\Users\213\Desktop\GitHub\AntsBattle\ClassLibrary1\obj\Debug\ClassLibrary1.csp
 C:\Users\213\Desktop\GitHub\AntsBattle\ClassLibrary1\obj\Debug\ClassLibrary1.dll
 C:\Users\213\Desktop\GitHub\AntsBattle\ClassLibrary1\obj\Debug\ClassLibrary1.pdb
 C:\Users\213\Desktop\GitHub\AntsBattle\ClassLibrary1\bin\Debug\maps\defaultMap.txt
+C:\Users\213\Desktop\GitHub\AntsBattle\AntsBattle\players\images\blackant.png
+C:\Users\213\Desktop\GitHub\AntsBattle\AntsBattle\players\images\food.png
+C:\Users\213\Desktop\GitHub\AntsBattle\AntsBattle\players\images\frog.png
+C:\Users\213\Desktop\GitHub\AntsBattle\AntsBattle\players\images\wall.png
+C:\Users\213\Desktop\GitHub\AntsBattle\AntsBattle\players\images\whiteant.png
+C:\Users\213\Desktop\GitHub\AntsBattle\AntsBattle\players\maps\defaultMap.txt
+C:\Users\213\Desktop\GitHub\AntsBattle\AntsBattle\players\ClassLibrary1.dll
+C:\Users\213\Desktop\GitHub\AntsBattle\AntsBattle\players\ClassLibrary1.pdb
+C:\Users\213\Desktop\GitHub\AntsBattle\AntsBattle\Players\maps\empty.txt
+C:\Users\213\Desktop\GitHub\AntsBattle\AntsBattle\Players\players\empty.txt

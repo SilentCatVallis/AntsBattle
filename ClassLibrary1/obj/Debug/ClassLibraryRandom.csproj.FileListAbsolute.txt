@@ -1,0 +1,13 @@
+C:\Users\213\Desktop\GitHub\AntsBattle\ClassLibrary1\bin\Debug\images\blackant.png
+C:\Users\213\Desktop\GitHub\AntsBattle\ClassLibrary1\bin\Debug\images\food.png
+C:\Users\213\Desktop\GitHub\AntsBattle\ClassLibrary1\bin\Debug\images\frog.png
+C:\Users\213\Desktop\GitHub\AntsBattle\ClassLibrary1\bin\Debug\images\wall.png
+C:\Users\213\Desktop\GitHub\AntsBattle\ClassLibrary1\bin\Debug\images\whiteant.png
+C:\Users\213\Desktop\GitHub\AntsBattle\ClassLibrary1\bin\Debug\maps\defaultMap.txt
+C:\Users\213\Desktop\GitHub\AntsBattle\ClassLibrary1\bin\Debug\ClassLibrary1.dll
+C:\Users\213\Desktop\GitHub\AntsBattle\ClassLibrary1\bin\Debug\ClassLibrary1.pdb
+C:\Users\213\Desktop\GitHub\AntsBattle\ClassLibrary1\bin\Debug\AntsBattle.exe
+C:\Users\213\Desktop\GitHub\AntsBattle\ClassLibrary1\bin\Debug\AntsBattle.pdb
+C:\Users\213\Desktop\GitHub\AntsBattle\ClassLibrary1\obj\Debug\ClassLibraryRandom.csprojResolveAssemblyReference.cache
+C:\Users\213\Desktop\GitHub\AntsBattle\ClassLibrary1\obj\Debug\ClassLibrary1.dll
+C:\Users\213\Desktop\GitHub\AntsBattle\ClassLibrary1\obj\Debug\ClassLibrary1.pdb

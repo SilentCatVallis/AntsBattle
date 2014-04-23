@@ -5,6 +5,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "AntsBattle", "AntsBattle\An
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ClassLibrary1", "ClassLibrary1\ClassLibrary1.csproj", "{ED118A15-2CF1-4415-AFFB-4426F93F0886}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ClassLibrary2", "ClassLibrary2\ClassLibrary2.csproj", "{3FAFD458-94AC-42B0-AF8F-381797B84986}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -19,6 +21,10 @@ Global
 		{ED118A15-2CF1-4415-AFFB-4426F93F0886}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{ED118A15-2CF1-4415-AFFB-4426F93F0886}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{ED118A15-2CF1-4415-AFFB-4426F93F0886}.Release|Any CPU.Build.0 = Release|Any CPU
+		{3FAFD458-94AC-42B0-AF8F-381797B84986}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{3FAFD458-94AC-42B0-AF8F-381797B84986}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{3FAFD458-94AC-42B0-AF8F-381797B84986}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{3FAFD458-94AC-42B0-AF8F-381797B84986}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

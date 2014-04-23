@@ -13,23 +13,6 @@ namespace AntsBattle
 		{
         }
 
-        //public override void Act(World world)
-        //{
-        //    foreach (var obj in world.Cells[Location])
-        //    {
-        //        if (obj.GetColourOrNone() == AntColour.White)
-        //        {
-        //            world.WhiteScore++;
-        //            world.RemoveObject(this);
-        //        }
-        //        if (obj.GetColourOrNone() == AntColour.Black)
-        //        {
-        //            world.BlackScore++;
-        //            world.RemoveObject(this);
-        //        }
-        //    }
-        //}
-
         public override Object GetObjectType()
         {
             return Object.Food;

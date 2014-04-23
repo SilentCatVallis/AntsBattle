@@ -1,5 +1,5 @@
 ﻿<Project Format="0.0.0.3">
-  <Version>2014-04-18T16:33:34.198119Z</Version>
+  <Version>2014-04-23T17:28:25.7337126Z</Version>
   <Binding>True</Binding>
   <Diagnostic>
     <Code>414</Code>
@@ -7,10 +7,10 @@
     <Severity>Warning</Severity>
     <Message>The field 'ClassLibrary1.Class1.a' is assigned but its value is never used</Message>
     <MappedFile>C:\Users\213\Desktop\GitHub\AntsBattle\ClassLibrary1\Class1.cs</MappedFile>
-    <MappedLine>13</MappedLine>
+    <MappedLine>9</MappedLine>
     <MappedColumn>20</MappedColumn>
     <OriginalFile>C:\Users\213\Desktop\GitHub\AntsBattle\ClassLibrary1\Class1.cs</OriginalFile>
-    <OriginalLine>13</OriginalLine>
+    <OriginalLine>9</OriginalLine>
     <OriginalColumn>20</OriginalColumn>
   </Diagnostic>
 </Project>
