@@ -20,4 +20,3 @@ C:\Users\213\Desktop\GitHub\AntsBattle\AntsBattle\players\maps\defaultMap.txt
 C:\Users\213\Desktop\GitHub\AntsBattle\AntsBattle\players\ClassLibrary2.dll
 C:\Users\213\Desktop\GitHub\AntsBattle\AntsBattle\players\ClassLibrary2.pdb
 C:\Users\213\Desktop\GitHub\AntsBattle\AntsBattle\players\maps\empty.txt
-C:\Users\213\Desktop\GitHub\AntsBattle\AntsBattle\players\players\empty.txt

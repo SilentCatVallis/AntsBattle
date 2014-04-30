@@ -22,7 +22,7 @@ namespace AntsBattle
         private TextBox LifeLength;
         private TextBox MouthLength;
         private TextBox FrogSleepTime;
-        private Label BattleMap;
+        private Label _battleMap;
         private Label BlackVsWhite;
         private Label Message;
         private Label lifeTimeLable;
@@ -48,8 +48,10 @@ namespace AntsBattle
             SecondPlayerChoosen = new ComboBox { Text = @"Choose second player name", Location = new Point(5, 35), Width = 200 };
             foreach (var player in Data.Players)
             {
-                FirstPlayerChoosen.Items.Add(player);
-                SecondPlayerChoosen.Items.Add(player);
+                if (player.EndsWith("1"))
+                    FirstPlayerChoosen.Items.Add(player);
+                if (player.EndsWith("2"))
+                    SecondPlayerChoosen.Items.Add(player);
             }
 
 
@@ -174,7 +176,7 @@ namespace AntsBattle
             SecondPlayerChoosen.Visible = false;
             FirstPlayerChoosen.Visible = false;
             MapChoosen.Visible = false;
-            BattleMap = new Label
+            _battleMap = new Label
             {
                 Text = "Map : " + MapChoosen.SelectedItem,
                 Location = new Point(30, 90),

@@ -48,4 +48,3 @@ C:\Users\213\Desktop\GitHub\AntsBattle\AntsBattle\players\maps\defaultMap.txt
 C:\Users\213\Desktop\GitHub\AntsBattle\AntsBattle\players\ClassLibrary1.dll
 C:\Users\213\Desktop\GitHub\AntsBattle\AntsBattle\players\ClassLibrary1.pdb
 C:\Users\213\Desktop\GitHub\AntsBattle\AntsBattle\Players\maps\empty.txt
-C:\Users\213\Desktop\GitHub\AntsBattle\AntsBattle\Players\players\empty.txt

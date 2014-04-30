@@ -3,9 +3,9 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio 2012
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "AntsBattle", "AntsBattle\AntsBattle.csproj", "{F74E3341-EFD6-4D67-91C7-A68C200F469A}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ClassLibrary1", "ClassLibrary1\ClassLibrary1.csproj", "{ED118A15-2CF1-4415-AFFB-4426F93F0886}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "PlayerName_1", "ClassLibrary1\PlayerName_1.csproj", "{ED118A15-2CF1-4415-AFFB-4426F93F0886}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ClassLibrary2", "ClassLibrary2\ClassLibrary2.csproj", "{3FAFD458-94AC-42B0-AF8F-381797B84986}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "PlayerName_2", "ClassLibrary2\PlayerName_2.csproj", "{3FAFD458-94AC-42B0-AF8F-381797B84986}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution

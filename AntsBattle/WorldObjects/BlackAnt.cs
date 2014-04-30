@@ -25,7 +25,15 @@ namespace AntsBattle
 
         public override void Act(World world)
         {
-            var direction = world.BlackAntAI.GetDirection(Location, new AIWorld(world, AntColour.Black));
+            Direction direction;
+            try
+            {
+                direction = world.BlackAntAI.GetDirection(Location, new AIWorld(world, AntColour.Black));
+            }
+            catch (Exception)
+            {
+                return;
+            }
             var destination = new Point(0, 0);
             if (direction == Direction.Up)
                 destination.Y += 1;
