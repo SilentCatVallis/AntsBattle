@@ -10,10 +10,6 @@ namespace ClassLibrary1
         private int a = 1;
         public Direction GetDirection(Point currentAntLocation, AIWorld world)
         {
-            if (currentAntLocation.X <= world.MapSize.Width / 2)
-                return Direction.Down;
-            if (currentAntLocation.X > world.MapSize.Width / 2)
-                return Direction.Up;
             var i = _r.Next()%4;
             switch (i)
             {

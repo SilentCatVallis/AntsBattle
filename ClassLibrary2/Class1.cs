@@ -10,25 +10,6 @@ namespace ClassLibrary2
         private int a = 1;
         public Direction GetDirection(Point currentAntLocation, AIWorld world)
         {
-            if (a == 2)
-                return Direction.None;
-            if (currentAntLocation.X >= world.MapSize.Width/2)
-            {
-                if (world.GetObjectInCell(new Point(currentAntLocation.X, currentAntLocation.Y - 1)) ==
-                    AntsBattle.Object.Wall)
-                {
-                    a = 2;
-                    return Direction.Right;
-                }
-                return Direction.Down;
-            }
-            if (currentAntLocation.X < world.MapSize.Width/2)
-            {
-                if (world.GetObjectInCell(new Point(currentAntLocation.X, currentAntLocation.Y + 1)) ==
-                    AntsBattle.Object.Wall)
-                    return Direction.Left;
-                return Direction.Up;
-            }
             var i = _r.Next() % 4;
             switch (i)
             {
